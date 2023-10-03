@@ -29,8 +29,8 @@ body {
 .light {
   --clr-bg: rgb(243 244 246);
   --clr-bg-alt: #fff;
-  --clr-fg: #8c8c8c;
-  --clr-fg-alt: #2b2b2b;
+  --clr-fg: #535355;
+  --clr-fg-alt: #212121;
   --clr-primary: rgb(59 130 246);;
   --shadow: rgba(100, 100, 111, 0.35) 0px 7px 29px 0px;
 }
@@ -272,7 +272,7 @@ main {
 }
 
 .projects__grid {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
@@ -327,8 +327,8 @@ main {
 
 .footer__link {
   font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--clr-fg);
+  font-weight: 300;
+  color: var(--clr-fg-alt)
 }
 
 .scroll-top {
