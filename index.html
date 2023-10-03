@@ -1,156 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Portfolio"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet"/>
     <script
-      src="https://kit.fontawesome.com/fa62c117c7.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="styles.css" />
+        src="https://kit.fontawesome.com/fa62c117c7.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css"/>
     <title>Anuj Khurana</title>
-  </head>
-  <body class="light" id="top">
-    <header class="header center">
-      <h3>
-        <a href="project.html" class="link"
-          >S.5281041</a
-        >
-      </h3>
-
-      <nav class="nav center">
-        <ul class="nav__list center">
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#projects">Projects</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#skills">About</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#contact">Contact</a>
-          </li>
-        </ul>
-
-        <!-- <button type="button" aria-label="toggle theme" class="btn btn--icon">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-        </button> -->
-
-        <button
-          type="button"
-          aria-label="toggle navigation"
-          class="btn btn--icon nav__hamburger"
-        >
-          <i aria-hidden="true" class="fas fa-bars"></i>
-        </button>
-      </nav>
-    </header>
-
-    <main>
-      <!-- About -->
-      <div class="about center">
-        <h1>Hi, I am <span class="about__name">Anuj Khurana.</span></h1>
-        <h2 class="about__role">Software and Full-stack Web Developer.</h2>
-        <p class="about__desc">
-          Consectetur neque sed quam molestiae consectetur nesciunt sit alias
-          Vitae libero perferendis reprehenderit optio veritatis Accusantium at
-          voluptatum cumque temporibus et Explicabo iste porro quis numquam
-          distinctio Repellendus adipisci nam perferendis amet eaque hic
-          Voluptates
-        </p>
-
-        <div class="about__contact center">
-          <a href="https://example.com">
-            <span class="btn btn--outline">Resume</span>
-          </a>
-
-          <a
-            href="https://github.com/aanujkhurana"
-            aria-label="github"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-
-          <a
-            href="https://linkedin.com/in/aanujkhurana"
-            aria-label="linkedin"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-linkedin"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Projects -->
-      <section id="projects" class="section projects">
-        <h2 class="section__title">Projects</h2>
-
-        <div class="projects__grid">
-          <div class="project">
-            <a href="projectReflection.html">
-            <h3>Project 1</h3>
-            <p class="project__description">
-              Ipsum accusamus ea excepturi aliquid eligendi amet. Explicabo
-              sapiente debitis labore sed ipsam Mollitia repellat illum quod
-              unde beatae Quis
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">SASS</li>
-              <li class="project__stack-item">TypeScript</li>
-              <li class="project__stack-item">React</li>
-            </ul>
-            <a
-              href="https://github.com"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://example.com"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
-          </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section class="section contact center" id="contact">
-        <h2 class="section__title">Contact</h2>
-        <a href="mailto:aanujkhurana@gmail.com">
-          <span class="btn btn--outline">Email me</span>
+</head>
+<body class="light" id="top">
+<header class="header center bg-white">
+    <h3>
+        <a href="index.html" class="link text-primary">
+            Home
         </a>
-      </section>
-    </main>
+    </h3>
+    <nav class="nav center">
+        <ul class="nav__list center space-x-6">
+            <li class="nav__list-item">
+                <a class="link link--nav" href="#projects">Projects</a>
+            </li>
+            <li class="nav__list-item">
+                <a class="link link--nav" href="#contact">contact</a>
+            </li>
+            <li class="nav__list-item">
+                <a class="link link--nav" href="#skills">More About me</a>
+            </li>
+        </ul>
+        <button
+            type="button"
+            aria-label="toggle navigation"
+            class="btn btn--icon nav__hamburger">
+            <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+    </nav>
+</header>
 
-    <footer class="footer">
-      <a
-        href="https://wwww.aanujkhurana.github.io/"
-        class="link footer__link"
-      >
-        Created By anuj khurana
-      </a>
-    </footer>
-
-    <div class="scroll-container">`
-    <div class="scroll-top">
-      <a aria-label="Scroll up" href="#top">
-        <i aria-hidden="true" class="fas fa-arrow-up"></i>
-      </a>
+<main>
+    <!-- About -->
+    <div class="about center mt-12">
+        <h1 class="text-4xl font-bold">
+            Hey 👋, I am <span class="about__name text-primary">Anuj Khurana.</span>
+        </h1>
+        <h2 class="about__role">
+            Software & Web Developer.
+        </h2>
+        <p class="about__desc text-gray-600 text-base mt-8 max-w-xl">
+            Consectetur neque sed quam molestiae consectetur nesciunt sit alias
+            Vitae libero perferendis reprehenderit optio veritatis Accusantium at
+            voluptatum cumque temporibus et Explicabo iste porro quis numquam
+            distinctio Repellendus adipisci nam perferendis amet eaque hic
+            Voluptates
+        </p>
+        <div class="about__contact center mt-12">
+            <a href="about.html" class="btn btn--outline">
+                Know More
+            </a>
+            <a href="https://github.com/aanujkhurana" aria-label="github"
+            class="link link--icon">
+                <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/aanujkhurana" aria-label="linkedin"
+            class="link link--icon">
+                <i aria-hidden="true" class="fab fa-linkedin"></i>
+            </a>
+        </div>
     </div>
-    </div>
 
-    <script src="./script.js"></script>
-  </body>
+    <!-- Projects -->
+    <section id="projects" class="section projects mt-12">
+        <h2 class="section__title text-2xl uppercase">Projects</h2>
+        <div class="projects__grid max-w-xl mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="project p-8 bg-white shadow-md text-center transition-transform transform hover:translate-y-[-7px]">
+                <a href="projectReflection.html">
+                    <h3 class="font-semibold">WIL Placement: Gilmour Space Technologies</h3>
+                    <ul class="project__stack mt-4 flex flex-wrap justify-center">
+                        <li class="project__stack-item m-2 font-semibold text-sm">Vue.js</li>
+                        <li class="project__stack-item m-2 font-semibold text-sm text">TypeScript</li>
+                        <li class="project__stack-item m-2 font-semibold text-sm">Tailwind Css</li>
+                        <li class="project__stack-item m-2 font-semibold text-sm">D3 Library</li>
+                    </ul>
+                    <p class="project__description mt-4 justify-items-start">
+                        I had the opportunity to work on an exciting project known as the 
+                        "<strong>Chainmail Component TreeChart</strong>." This project aimed to enhance the functionality of Chainmail, a sophisticated web-based Product Development Lifecycle Tool, by incorporating a dynamic and interactive tree chart visualization for managing complex rocket assembly artifacts. My involvement in this project allowed me to apply and develop a wide range of technical skills while contributing to a cutting-edge aerospace technology tool.
+                    </p>
+                    <br>
+                    <a href="projectReflection.html" class="link link--icon mt-4">
+                        <i class="font-black font-mono hover:underline">Read more about project</i>
+                    </a>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact center mt-12" id="contact">
+        <h2 class="section__title text-2xl uppercase">Contact</h2>
+        <a href="mailto:aanujkhurana@gmail.com">
+            <span class="btn btn--outline mt-4">Email me</span>
+        </a>
+    </section>
+</main>
+
+<footer class="footer bg-white mt-12 py-8">
+    <a href="https://wwww.aanujkhurana.github.io/" class="link footer__link text-primary">
+        Created By s5281041 Griffith University
+    </a>
+</footer>
+
+<script src="./script.js"></script>
+</body>
 </html>
