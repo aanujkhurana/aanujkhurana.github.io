@@ -29,8 +29,8 @@ body {
 .light {
   --clr-bg: rgb(243 244 246);
   --clr-bg-alt: #fff;
-  --clr-fg: #555;
-  --clr-fg-alt: #444;
+  --clr-fg: #8c8c8c;
+  --clr-fg-alt: #2b2b2b;
   --clr-primary: rgb(59 130 246);;
   --shadow: rgba(100, 100, 111, 0.35) 0px 7px 29px 0px;
 }
@@ -294,6 +294,7 @@ main {
 
 .project__description {
   margin-top: 1em;
+  color: var(--clr-fg-alt)
 }
 
 .project__stack {
