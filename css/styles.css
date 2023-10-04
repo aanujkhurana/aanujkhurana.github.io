@@ -272,7 +272,7 @@ main {
 }
 
 .projects__grid {
-  max-width: 900px;
+  max-width: 880px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
@@ -283,17 +283,20 @@ main {
   padding: 2em;
   margin: 0 auto;
   text-align: center;
+  border: 2px solid transparent;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
 }
 
 .project:hover {
+  border: 2px solid var(--clr-primary);
   transform: translateY(-7px);
-  box-shadow: rgb(100, 100, 111) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.733) 0px 7px 29px 0px;
 }
 
 .project__description {
-  margin-top: 1em;
+  text-align: start;
+  margin-top: 2em;
   color: var(--clr-fg-alt)
 }
 
