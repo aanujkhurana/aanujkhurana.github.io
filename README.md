@@ -1,14 +1,13 @@
 # Peronsal Portfolio
-This is my personal portfolio website made using HTML, CSS, Tailwind CSS and JavaScript. 
+This is my personal portfolio website made using HTML, CSS, and JavaScript only. Deployed on github pages.
+
 It is made for the purpose of assignment for coursework - 7822ICT WIL Placement.
-
-My internship program Placement; GilmourSpace Technologies, Gold Coast, Australia.
-
-[visit here](https://www.gspacetech.com/)
+Project Included - WIL Placement
+My internship Placement; GilmourSpace Technologies, Gold Coast, Australia. [visit Gilmour Space Website](https://www.gspacetech.com/)
 
 ## Visit Portfolio
+[click here to visit Protfolio](https://aanujkhurana.github.io/index.html)
 
-[visit here](https://aanujkhurana.github.io/index.html)
 
 ## License
 
