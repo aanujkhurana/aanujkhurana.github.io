@@ -1,0 +1,326 @@
+@import url(https://fonts.googleapis.com/css?family=Advent+Pro);
+@import url(https://fonts.googleapis.com/css?family=Actor);
+
+.circle {
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px white;
+  pointer-events: none;
+  position: relative;
+  top: -10rem;
+  left: -10rem;
+  height: 2rem;
+  width: 2rem;
+  transition: transform 0.4s, background 0.4s;
+}
+
+.circle.big {
+  background: white;
+  transform: scale(2);
+}
+
+a,
+button,
+input,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  appearance: none;
+  background: none;
+  -webkit-font-smoothing: antialiased;
+}
+section {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+body {
+  margin: 0;
+  background: var(--bg, linear-gradient(180deg, rgba(18, 11, 79, 1) 100%, rgba(31, 37, 81, 1) 100%));
+  scroll-behavior: smooth;
+}
+
+.nav {
+  width: 100%;
+  height: 40px;
+  max-width: 800px;
+  position: fixed; /* Change to fixed */
+  top: 10px; /* Stick it to the top */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 100;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-family: "Actor", sans-serif;
+  font-weight: medium;
+}
+.nav a:hover {
+  color: #ff6262;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+.nav a.active {
+  color: #ff6262;
+  font-weight: bolder;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgtxt {
+  flex-shrink: 0;
+  width: 1350px;
+  height: 600px;
+  position: relative;
+  overflow: visible;
+  top: -15%;
+  right: 17.5%;
+}
+
+.me {
+  flex-shrink: 0;
+  width: 396px;
+  height: 348px;
+  position: relative;
+  margin: 0 auto;
+  justify-content: center;
+  left: 50%;
+  bottom: -30%;
+}
+
+.download {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 70%;
+  top: 542px;
+  color: #ffffff;
+  text-align: left;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 14px;
+  line-height: 133.2%;
+  font-weight: 400;
+}
+
+.btn-resumedownload {
+  background: #353a84;
+  border-radius: 8px;
+  padding: 6px 10px 6px 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  color: #ffffff;
+  text-align: left;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-resumedownload:hover {
+  background: #2c305e; /* Darken the background on hover */
+  transform: scale(1.05); /* Scale up the button on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow on hover */
+}
+
+.btn-resumedownload:focus {
+  outline: none;
+}
+
+.btn-resumedownload:active {
+  background: #272b57;
+}
+
+.btn-resumedownload:hover::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid #ff6262; /* Change the color of the stroke on hover */
+  border-radius: 10px;
+}
+
+.bodytxt {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 72px;
+  top: 415px;
+  color: #FFF;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.subline {
+  color: rgba(255, 255, 255, 0.46);
+  font-family: "Actor";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.8px;
+}
+
+.bodytxt2 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 16px;
+  line-height: 155.32%;
+  font-weight: 400;
+  position: relative;
+  width: 278px;
+  height: 99px;
+}
+
+/* Projects */
+.projects {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.development {
+  width: 1163.05px;
+  height: 401.41px;
+  position: absolute;
+  top: 266px;
+  left: 1px;
+  overflow: visible;
+}
+
+.Pselection {
+  background: #353a84b4;
+  border-radius: 8px;
+  padding: 6px 0px 6px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  position: absolute;
+  top: 120px;
+  transition: background 0.3s ease; /* Add transition for a smooth color change */
+}
+
+/* Add hover effect to change background color on hover */
+.Pselection:hover {
+  background: #353a84; /* Change this to the desired hover background color */
+}
+
+.bttn,
+.bttn2 {
+  border-radius: 8px;
+  padding: 12px 16px 12px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer; /* Add cursor pointer for better UX */
+  transition: background 0.3s ease, color 0.3s ease; /* Add transition for a smooth color change */
+}
+
+/* Style for the active button */
+.bttn.active,
+.bttn2.active {
+  background: #1d2051; /* Change this to the desired active button background color */
+  color: #ffffff; /* Change this to the desired active button text color */
+  border: 2px solid #ff6262;
+}
+
+.bttn:hover,
+.bttn2:hover {
+  background: #1d2051; /* Change this to the desired hover background color */
+  color: #ffffff; /* Change this to the desired hover text color */
+}
+
+.txt {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Actor", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+}
+
+/* Add styles for the Development and Design sections */
+#development-section,
+#design-section {
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-100%); /* Initial position, off-screen to the left */
+  transition: transform 0.3s ease; /* Add transition for smooth section transitions */
+  z-index: -1;
+}
+
+/* Add styles for the content inside the sections */
+#development-section .content,
+#design-section .content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+/* Style for the active section */
+#development-section.active,
+#design-section.active {
+  transform: translateX(0); /* Move the active section into view */
+}
