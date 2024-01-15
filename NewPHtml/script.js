@@ -19,6 +19,24 @@ document.addEventListener('mousemove', (e) => {
     }, 10);
 });
 
+// Scroll to top function
+function scrollToTop() {
+    window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+    });
+}
+
+// Show/hide the scroll-to-top button based on scroll position
+document.addEventListener('scroll', function() {
+    var scrollButton = document.getElementById('scrollToTopBtn');
+    if (window.scrollY > 200) {
+    scrollButton.style.display = 'block';
+    } else {
+    scrollButton.style.display = 'none';
+    }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav a");
