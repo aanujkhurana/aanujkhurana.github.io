@@ -103,18 +103,3 @@ function toggleSection(sectionId) {
 window.onload = function () {
     toggleSection('development-section');
 };
-
-
-//FOR NAV BG ON SCROLL 
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     var nav = document.getElementById('nav');
-
-//     window.addEventListener('scroll', function() {
-//     if (window.scrollY > 50) {
-//         nav.classList.add('scrolled');
-//     } else {
-//         nav.classList.remove('scrolled');
-//     }
-//     });
-// });

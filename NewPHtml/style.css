@@ -30,7 +30,7 @@
   width: 3rem;
   height: 3rem;
   font-size: 20px;
-  cursor: pointer;
+  cursor: none;
   transition: transform 0.4s;
 }
 
@@ -118,6 +118,7 @@ body {
   color: #ff6262;
   text-decoration: underline;
   font-weight: bolder;
+  cursor: none;
 }
 .nav a.active {
   color: #ff6262;
@@ -153,6 +154,12 @@ body {
   justify-content: center;
   left: 50%;
   bottom: -30%;
+  transition: opacity 3s ease-in-out; /* Set the duration and easing function as needed */
+}
+
+/* New styles for hover effect */
+.me:hover {
+  opacity: 0.0; /* Adjust the desired opacity on hover */
 }
 
 .download {
@@ -243,6 +250,17 @@ body {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 2.8px;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit; /* or the color you want for visited links */
+  text-decoration: none; /* or the text-decoration you want for visited links */
+}
+.subline a:hover {
+  color: #ff6262;
+  font-weight: bold;
+  cursor: none;
 }
 
 .bodytxt2 {
@@ -345,21 +363,6 @@ body {
   z-index: -2;
 }
 
-.union,
-.union * {
-  box-sizing: border-box;
-}
-.union {
-  border-radius: 0px;
-  width: 23.28px;
-  height: 34.62px;
-  left: 12px;
-  top: 5px;
-  position: relative;
-  overflow: visible;
-}
-
-
 /* Add styles for the Development and Design sections */
 #development-section,
 #design-section {
@@ -449,15 +452,15 @@ body {
   text-transform: uppercase;
 }
 
-input {
+.cardinput {
   display: none;
 }
 
-input:checked + label {
+.cardinput:checked + label {
   width: 600px;
 }
 
-input:checked + label .description {
+.cardinput:checked + label .description {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
@@ -487,10 +490,6 @@ input:checked + label .description {
   background-image: url('./img1.jpg');
 }
 
-.contact-card,
-.contact-card * {
-  box-sizing: border-box;
-}
 .contact-card {
   background: rgba(20, 14, 79, 0.8);
   border-radius: 48px;
@@ -503,178 +502,146 @@ input:checked + label .description {
   overflow: hidden;
 }
 .cardbg-2 {
-  background: #151d6b;
+  background: #151e6b;
   width: 315px;
   height: 469px;
   position: absolute;
   left: 565px;
   top: -4px;
 }
-.gold-coast-australia {
+
+.gold-coast-australia, .email {
   color: #ffffff;
   text-align: justified;
-  font-family: "Actor-Regular", sans-serif;
+  font-family: "Actor", sans-serif;
   font-size: 17px;
-  line-height: 117.65%;
+  line-height: 118%;
   font-weight: 400;
   position: absolute;
+}
+
+.gold-coast-australia {
+  line-height: 118%;
   left: 678px;
   top: 334px;
 }
+
 .email {
-  display: flex;
-  flex-direction: row;
-  gap: 6px;
-  align-items: center;
-  justify-content: flex-start;
-  position: absolute;
-  left: 611px;
+  gap: 8px;
+  left: 642px;
   top: 136px;
 }
-.mail {
-  opacity: 0;
-  flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  position: relative;
-  overflow: visible;
+
+.email:hover {
+  font-size: 20px; /* Adjust the desired font size on hover */
+  text-decoration: underline;
+  color: #73faff; /* Adjust the desired hover color */
 }
-.aanujkhurana-gmail-com {
-  color: #ffffff;
-  text-align: justified;
-  font-family: "Actor-Regular", sans-serif;
-  font-size: 17px;
-  line-height: 117.65%;
-  font-weight: 400;
-  position: relative;
-}
-.get-in-touch {
+
+
+.get-in-touch, .email-me-at, .find-me-at, .i-am-located-at {
   color: #ff7373;
   text-align: left;
-  font-family: "AdventPro-Bold", sans-serif;
+  font-family: "Advent Pro", sans-serif;
   font-size: 25px;
   font-weight: 700;
   position: absolute;
+}
+.get-in-touch {
   left: 64px;
   top: 26px;
 }
 .email-me-at {
-  color: #ff7373;
-  text-align: left;
-  font-family: "AdventPro-Bold", sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-  position: absolute;
   left: 725px;
   top: 95px;
 }
 .find-me-at {
-  color: #ff7373;
-  text-align: left;
-  font-family: "AdventPro-Bold", sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-  position: absolute;
   left: 725px;
   top: 180px;
 }
 .i-am-located-at {
-  color: #ff7373;
-  text-align: left;
-  font-family: "AdventPro-Bold", sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-  position: absolute;
   left: 694px;
   top: 290px;
 }
-.discuss-a-project-or-just-say-hello {
+.discuss-a-project {
   color: #ffffff;
   text-align: left;
   font-family: "Advent Pro", sans-serif;
-  font-size: 10px;
+  font-size: 20px;
   font-weight: 400;
   position: absolute;
-  left: 65px;`
+  left: 64px;
   top: 58px;
 }
-.rectangle-5 {
-  background: #ffffff;
-  border-radius: 5px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 0.5px;
-  width: 400px;
-  height: 120px;
+
+.github, .linkedin {
+  height: auto;
   position: absolute;
-  left: 61px;
-  top: 225px;
-}
-.rectangle-3 {
-  background: #ffffff;
-  border-radius: 5px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 0.4px;
-  width: 200px;
-  height: 40px;
-  position: absolute;
-  left: 61px;
-  top: 160px;
-}
-.rectangle-2 {
-  background: #ffffff;
-  border-radius: 5px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 0.4px;
-  width: 200px;
-  height: 40px;
-  position: absolute;
-  left: 62px;
-  top: 95px;
-}
-.btn-submit {
-  background: #ff7373;
-  border-radius: 8px;
-  padding: 6px 10px 6px 10px;
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-  align-items: center;
-  justify-content: center;
-  width: 400px;
-  height: 41px;
-  position: absolute;
-  left: 61px;
-  top: 375px;
-  color: #ffffff;
-  text-align: left;
-  font-family: "AdventPro-Medium", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  position: relative;
+  overflow: visible;
+  bottom: 45%;
+  top: 50%;
+  width: 3%;
+  height: 6%;
+  fill: white;
 }
 
 .github {
-  height: auto;
-  position: absolute;
-  right: 11.25%;
-  left: 85.68%;
-  width: 3.07%;
-  bottom: 44.17%;
-  top: 50%;
-  height: 5.83%;
-  overflow: visible;
+  right: 12%;
+  left: 84%;
 }
 .linkedin {
-  height: auto;
+  right: 6%;
+  left: 90%;
+}
+
+.github:hover, .linkedin:hover {
+  transform: scale(1.7); 
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+  cursor: pointer;
+}
+
+form {
   position: absolute;
-  right: 6.02%;
-  left: 91.02%;
-  width: 2.95%;
-  bottom: 44.39%;
-  top: 50%;
-  height: 5.61%;
-  overflow: visible;
+  top: 100px;
+  left: 64px;
+}
+
+textarea{
+  max-width: 400px;
+  max-height: 120px;
+  min-width: 400px;
+  min-height: 40px;
+  }
+
+input, textarea {
+  width: 400px;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  color: #120B4F;
+  font-size: 18px;
+}
+
+input[type="submit"] {
+  background-color: #353a84;
+  width: 420px;
+    border: 1px solid #ffffff;
+  margin-top: 16px;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Advent Pro", sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  outline: none;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background: #ff6262; /* Darken the background on hover */
+  transform: scale(1.05); /* Scale up the button on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow on hover */
 }

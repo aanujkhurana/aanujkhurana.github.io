@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="./vars.css" />
     <link rel="stylesheet" href="./style.css" />
   <title>Aanuj Khurana</title>
   </head>
@@ -34,15 +33,14 @@
       <nav class="nav" id="nav">
         <a href="#home">Home</a>/
         <a href="#projects">Projects</a>/
-        <a href="#contact">Contact</a>/
-        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
       <!-- Sections -->
       <section id="home">
       <div class="home">
         <div class="bodytxt"> Hello👋，<br />
           I am Anuj Khurana
-          <div class="subline">Software Developer | UI-UX Designer</div>
+          <div class="subline"><a href="#development-section">Software Developer</a> | <a href="#design-section">UI-UX Designer</a></div>
           <span class="bodytxt2">
             Welcome to my website. Please feel free to Contact Me,
               or you can check out my Projects
@@ -162,7 +160,7 @@
             </svg>
             <div class="wrapper">
               <div class="container">
-                  <input type="radio" name="slide" id="c1" checked>
+                  <input class="cardinput" type="radio" name="slide" id="c1" checked>
                   <label for="c1" class="card">
                       <div class="row">
                           <div class="icon">1</div>
@@ -173,7 +171,7 @@
                           </div>
                       </div>
                   </label>
-                  <input type="radio" name="slide" id="c2" >
+                  <input class="cardinput" type="radio" name="slide" id="c2" >
                   <label for="c2" class="card">
                       <div class="row">
                           <div class="icon">2</div>
@@ -184,7 +182,7 @@
                           </div>
                       </div>
                   </label>
-                  <input type="radio" name="slide" id="c3" >
+                  <input class="cardinput" type="radio" name="slide" id="c3" >
                   <label for="c3" class="card">
                       <div class="row">
                           <div class="icon">3</div>
@@ -194,7 +192,7 @@
                           </div>
                       </div>
                   </label>
-                  <input type="radio" name="slide" id="c4" >
+                  <input class="cardinput" type="radio" name="slide" id="c4" >
                   <label for="c4" class="card">
                       <div class="row">
                           <div class="icon">4</div>
@@ -242,7 +240,7 @@
           </svg>
           <div class="wrapper">
             <div class="container">
-                <input type="radio" name="d-slide" id="d1" checked>
+                <input class="cardinput" type="radio" name="d-slide" id="d1" checked>
                 <label for="d1" class="card">
                     <div class="row">
                         <div class="icon">1</div>
@@ -253,7 +251,7 @@
                         </div>
                     </div>
                 </label>
-                <input type="radio" name="d-slide" id="d2" >
+                <input class="cardinput" type="radio" name="d-slide" id="d2" >
                 <label for="d2" class="card">
                     <div class="row">
                         <div class="icon">2</div>
@@ -264,7 +262,7 @@
                         </div>
                     </div>
                 </label>
-                <input type="radio" name="d-slide" id="d3" >
+                <input class="cardinput" type="radio" name="d-slide" id="d3" >
                 <label for="d3" class="card">
                     <div class="row">
                         <div class="icon">3</div>
@@ -274,7 +272,7 @@
                         </div>
                     </div>
                 </label>
-                <input type="radio" name="d-slide" id="d4" >
+                <input class="cardinput" type="radio" name="d-slide" id="d4" >
                 <label for="d4" class="card">
                     <div class="row">
                         <div class="icon">4</div>
@@ -291,62 +289,57 @@
         </div>        
       </section>
       <section id="contact">
+        <!-- Content for the Contact section -->
         <div class="contact-card">
+          <form>
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
+            <input type="submit" value="Submit">
+          </form>
           <div class="cardbg-2"></div>
           <div class="gold-coast-australia">Gold Coast, Australia</div>
-          <div class="email">
-            <svg class="mail" width="24" height="24"></svg>
-            <div class="aanujkhurana-gmail-com">aanujkhurana@gmail.com</div>
-          </div>
+          <a href="mailto:aanujkhurana@gmail.com"><div class="email">aanujkhurana@gmail.com</div></a>
           <div class="get-in-touch">Get in Touch</div>
           <div class="email-me-at">Email me at:</div>
           <div class="find-me-at">Find me at:</div>
           <div class="i-am-located-at">I am located at:</div>
-          <div class="discuss-a-project-or-just-say-hello">
-            Discuss a project or just say Hello!
-          </div>
-          <form id="contactForm" class="contact-form">
-            <div class="input">
-              <input type="text" id="name" name="name" required placeholder="Enter your name">
-            </div>
-            <div class="input">
-              <input type="email" id="email" name="email" required placeholder="Enter your email">
-            </div>
-            <div class="input">
-              <textarea id="message" name="message" required placeholder="Type your message here"></textarea>
-            </div>
-            <button type="submit" class="btn-submit">
-              <div class="downloadresume">Submit</div>
-            </button>
-          </form>
-          <svg
-            class="github"
-            width="27"
-            height="27"
-            viewBox="0 0 27 27"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <!-- ... (your existing GitHub SVG) ... -->
-          </svg>
-          <svg
-            class="linkedin"
-            width="26"
-            height="26"
-            viewBox="0 0 26 26"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <!-- ... (your existing LinkedIn SVG) ... -->
-          </svg>
-        </div>        
-      </section>
-      <section id="about">
-        <h1>About</h1>
-        <!-- Content for the About section -->
-        
+          <div class="discuss-a-project">Discuss a project or just say Hello!</div>
+          <a href="https://www.github.com/aanujkhurana" target="_blank">
+            <svg
+              class="github"
+              width="27"
+              height="27"
+              viewBox="0 0 27 27"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.5112 0C6.03984 0 0 6.0156 0 13.4577C0 19.4066 3.86993 24.4422 9.23856 26.2245C9.90978 26.3584 10.1556 25.9349 10.1556 25.5786C10.1556 25.2666 10.1335 24.1972 10.1335 23.083C6.37504 23.8852 5.59236 21.4787 5.59236 21.4787C4.98835 19.919 4.0934 19.5182 4.0934 19.5182C2.86325 18.6937 4.183 18.6937 4.183 18.6937C5.54756 18.7829 6.26358 20.0752 6.26358 20.0752C7.47133 22.1248 9.4175 21.5457 10.2004 21.1891C10.3122 20.3201 10.6703 19.7186 11.0506 19.3845C8.05294 19.0725 4.89902 17.9139 4.89902 12.7446C4.89902 11.2741 5.43555 10.0709 6.28571 9.13524C6.15157 8.8011 5.68169 7.41942 6.42012 5.57017C6.42012 5.57017 7.56093 5.21361 10.1332 6.95157C11.2345 6.65699 12.3703 6.50713 13.5112 6.50587C14.652 6.50587 15.8149 6.662 16.8888 6.95157C19.4614 5.21361 20.6022 5.57017 20.6022 5.57017C21.3406 7.41942 20.8705 8.8011 20.7364 9.13524C21.6089 10.0709 22.1233 11.2741 22.1233 12.7446C22.1233 17.9139 18.9694 19.05 15.9493 19.3845C16.4416 19.8077 16.8664 20.6097 16.8664 21.8798C16.8664 23.6845 16.8443 25.1329 16.8443 25.5783C16.8443 25.9349 17.0904 26.3584 17.7614 26.2247C23.13 24.4419 26.9999 19.4066 26.9999 13.4577C27.0221 6.0156 20.9601 0 13.5112 0Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/aanujkhurana" target="_blank">
+            <svg
+              class="linkedin"
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22.9048 0H3.09524C1.38667 0 0 1.34705 0 3.0068V22.2503C0 23.9101 1.38667 25.2571 3.09524 25.2571H22.9048C24.6133 25.2571 26 23.9101 26 22.2503V3.0068C26 1.34705 24.6133 0 22.9048 0ZM8.04762 9.62177V21.0476H4.33333V9.62177H8.04762ZM4.33333 6.29625C4.33333 5.45434 5.07619 4.81088 6.19048 4.81088C7.30476 4.81088 8.00429 5.45434 8.04762 6.29625C8.04762 7.13815 7.35429 7.81769 6.19048 7.81769C5.07619 7.81769 4.33333 7.13815 4.33333 6.29625ZM21.6667 21.0476H17.9524C17.9524 21.0476 17.9524 15.479 17.9524 15.034C17.9524 13.8313 17.3333 12.6286 15.7857 12.6045H15.7362C14.2381 12.6045 13.619 13.8433 13.619 15.034C13.619 15.5813 13.619 21.0476 13.619 21.0476H9.90476V9.62177H13.619V11.1613C13.619 11.1613 14.8138 9.62177 17.2157 9.62177C19.6733 9.62177 21.6667 11.2635 21.6667 14.589V21.0476Z"
+              />
+            </svg>
+          </a>
+        </div>    
       </section>
     </main>
     <script src="./script.js"></script>
   </body>
 </html>
+`
