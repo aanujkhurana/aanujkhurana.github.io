@@ -23,23 +23,39 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #ffffff;
-  color: #000000;
-  border: none;
+  color: #ffffff;
+  border: 2px solid white;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  box-shadow: 0 0 10px white;
+  width: 3rem;
+  height: 3rem;
   font-size: 20px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
+  transition: transform 0.4s;
 }
 
 .scroll-to-top-btn:hover {
-  background-color: #0056b3;
+  background: #FFF;
+  color: #ff6262;
+  transform: scale(1.5);
+}
+
+.union,
+.union * {
+  box-sizing: border-box;
+}
+.union {
+  border-radius: 0px;
+  width: 23.28px;
+  height: 34.62px;
+  left: 12px;
+  top: 5px;
+  position: relative;
+  overflow: visible;
+  fill: #FFF
+}
+.union:hover {
+  fill: #ff6262;
 }
 
 a,
@@ -76,9 +92,8 @@ body {
 .nav {
   width: 100%;
   height: 40px;
-  max-width: 800px;
-  position: fixed; /* Change to fixed */
-  top: 10px; /* Stick it to the top */
+  position: fixed;
+  top: 0;
   left: 50%;
   transform: translateX(-50%); /* Center horizontally */
   display: flex;
@@ -87,6 +102,10 @@ body {
   justify-content: center;
   color: white;
   z-index: 1;
+  transition: background-color 1.0s ease;
+}
+.nav.scrolled {
+  background-color: #120B4F
 }
 
 .nav a {
@@ -326,6 +345,21 @@ body {
   z-index: -2;
 }
 
+.union,
+.union * {
+  box-sizing: border-box;
+}
+.union {
+  border-radius: 0px;
+  width: 23.28px;
+  height: 34.62px;
+  left: 12px;
+  top: 5px;
+  position: relative;
+  overflow: visible;
+}
+
+
 /* Add styles for the Development and Design sections */
 #development-section,
 #design-section {
@@ -451,4 +485,196 @@ input:checked + label .description {
 }
 .card[for="d4"] {
   background-image: url('./img1.jpg');
+}
+
+.contact-card,
+.contact-card * {
+  box-sizing: border-box;
+}
+.contact-card {
+  background: rgba(20, 14, 79, 0.8);
+  border-radius: 48px;
+  border-style: solid;
+  border-color: #717ef1;
+  border-width: 1px;
+  width: 880px;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+.cardbg-2 {
+  background: #151d6b;
+  width: 315px;
+  height: 469px;
+  position: absolute;
+  left: 565px;
+  top: -4px;
+}
+.gold-coast-australia {
+  color: #ffffff;
+  text-align: justified;
+  font-family: "Actor-Regular", sans-serif;
+  font-size: 17px;
+  line-height: 117.65%;
+  font-weight: 400;
+  position: absolute;
+  left: 678px;
+  top: 334px;
+}
+.email {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 611px;
+  top: 136px;
+}
+.mail {
+  opacity: 0;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: visible;
+}
+.aanujkhurana-gmail-com {
+  color: #ffffff;
+  text-align: justified;
+  font-family: "Actor-Regular", sans-serif;
+  font-size: 17px;
+  line-height: 117.65%;
+  font-weight: 400;
+  position: relative;
+}
+.get-in-touch {
+  color: #ff7373;
+  text-align: left;
+  font-family: "AdventPro-Bold", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  position: absolute;
+  left: 64px;
+  top: 26px;
+}
+.email-me-at {
+  color: #ff7373;
+  text-align: left;
+  font-family: "AdventPro-Bold", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  position: absolute;
+  left: 725px;
+  top: 95px;
+}
+.find-me-at {
+  color: #ff7373;
+  text-align: left;
+  font-family: "AdventPro-Bold", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  position: absolute;
+  left: 725px;
+  top: 180px;
+}
+.i-am-located-at {
+  color: #ff7373;
+  text-align: left;
+  font-family: "AdventPro-Bold", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  position: absolute;
+  left: 694px;
+  top: 290px;
+}
+.discuss-a-project-or-just-say-hello {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  position: absolute;
+  left: 65px;`
+  top: 58px;
+}
+.rectangle-5 {
+  background: #ffffff;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0.5px;
+  width: 400px;
+  height: 120px;
+  position: absolute;
+  left: 61px;
+  top: 225px;
+}
+.rectangle-3 {
+  background: #ffffff;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0.4px;
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  left: 61px;
+  top: 160px;
+}
+.rectangle-2 {
+  background: #ffffff;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0.4px;
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  left: 62px;
+  top: 95px;
+}
+.btn-submit {
+  background: #ff7373;
+  border-radius: 8px;
+  padding: 6px 10px 6px 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 41px;
+  position: absolute;
+  left: 61px;
+  top: 375px;
+  color: #ffffff;
+  text-align: left;
+  font-family: "AdventPro-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+.github {
+  height: auto;
+  position: absolute;
+  right: 11.25%;
+  left: 85.68%;
+  width: 3.07%;
+  bottom: 44.17%;
+  top: 50%;
+  height: 5.83%;
+  overflow: visible;
+}
+.linkedin {
+  height: auto;
+  position: absolute;
+  right: 6.02%;
+  left: 91.02%;
+  width: 2.95%;
+  bottom: 44.39%;
+  top: 50%;
+  height: 5.61%;
+  overflow: visible;
 }

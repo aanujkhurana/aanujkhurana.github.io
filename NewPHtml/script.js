@@ -1,5 +1,6 @@
 // script.js
 
+// For Cursor Animation
 const circle = document.getElementById('circle');
 document.addEventListener('mousemove', (e) => {
     const height = circle.offsetHeight;
@@ -30,13 +31,14 @@ function scrollToTop() {
 // Show/hide the scroll-to-top button based on scroll position
 document.addEventListener('scroll', function() {
     var scrollButton = document.getElementById('scrollToTopBtn');
-    if (window.scrollY > 200) {
+    if (window.scrollY > 300) {
     scrollButton.style.display = 'block';
     } else {
     scrollButton.style.display = 'none';
     }
 });
 
+// For Nav Links active color
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav a");
@@ -54,13 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     }
-
     window.addEventListener("scroll", updateActiveLink);
     window.addEventListener("resize", updateActiveLink);
-
-    // Initial call to set the active link based on the page load
-    updateActiveLink();
 });
+
+// FOR PROJECTS SECTION TOGGLE DESIGN and DEVELOPMENT
 
 function toggleSection(sectionId) {
     // Get the currently active section
@@ -103,3 +103,18 @@ function toggleSection(sectionId) {
 window.onload = function () {
     toggleSection('development-section');
 };
+
+
+//FOR NAV BG ON SCROLL 
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     var nav = document.getElementById('nav');
+
+//     window.addEventListener('scroll', function() {
+//     if (window.scrollY > 50) {
+//         nav.classList.add('scrolled');
+//     } else {
+//         nav.classList.remove('scrolled');
+//     }
+//     });
+// });

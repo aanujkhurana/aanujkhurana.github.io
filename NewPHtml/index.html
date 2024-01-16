@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
     <link rel="stylesheet" href="./vars.css" />
     <link rel="stylesheet" href="./style.css" />
-  <title>Anuj Khurana</title>
+  <title>Aanuj Khurana</title>
   </head>
   <body>
     <main>
@@ -15,10 +15,23 @@
       <div id="circle" class="circle"></div>
         <!-- Floating button -->
       <div id="scrollToTopBtn" class="scroll-to-top-btn" onclick="scrollToTop()">
-        <span>&#8593;</span>
+        <svg
+          class="union"
+          width="12"
+          height="17.2"
+          viewBox="0 0 24 35"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M21.8475 13.8387C23.6293 13.8387 24.5216 11.6844 23.2617 10.4245L13.6276 0.790377C12.8465 0.00932867 11.5802 0.00932674 10.7991 0.790375L1.16499 10.4245C-0.0949381 11.6844 0.797394 13.8387 2.5792 13.8387H4.6141C5.71867 13.8387 6.6141 14.7342 6.6141 15.8387V32.8286C6.6141 33.9332 7.50953 34.8286 8.6141 34.8286H15.5224C16.627 34.8286 17.5224 33.9332 17.5224 32.8286V15.8387C17.5224 14.7342 18.4179 13.8387 19.5224 13.8387H21.8475Z"
+          />
+        </svg>
       </div>
       <!-- NAVBAR -->
-      <nav class="nav">
+      <nav class="nav" id="nav">
         <a href="#home">Home</a>/
         <a href="#projects">Projects</a>/
         <a href="#contact">Contact</a>/
@@ -38,7 +51,7 @@
         <img class="me" src="./me.png" />
         <div class="download">
           Click below to download, <br>
-          my colourless resume.
+          my colorless resume.
         <button class="btn-resumedownload">
           <svg
             class="vector"
@@ -278,10 +291,60 @@
         </div>        
       </section>
       <section id="contact">
-        <!-- Content for the Contact section -->
+        <div class="contact-card">
+          <div class="cardbg-2"></div>
+          <div class="gold-coast-australia">Gold Coast, Australia</div>
+          <div class="email">
+            <svg class="mail" width="24" height="24"></svg>
+            <div class="aanujkhurana-gmail-com">aanujkhurana@gmail.com</div>
+          </div>
+          <div class="get-in-touch">Get in Touch</div>
+          <div class="email-me-at">Email me at:</div>
+          <div class="find-me-at">Find me at:</div>
+          <div class="i-am-located-at">I am located at:</div>
+          <div class="discuss-a-project-or-just-say-hello">
+            Discuss a project or just say Hello!
+          </div>
+          <form id="contactForm" class="contact-form">
+            <div class="input">
+              <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+            <div class="input">
+              <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div class="input">
+              <textarea id="message" name="message" required placeholder="Type your message here"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <div class="downloadresume">Submit</div>
+            </button>
+          </form>
+          <svg
+            class="github"
+            width="27"
+            height="27"
+            viewBox="0 0 27 27"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- ... (your existing GitHub SVG) ... -->
+          </svg>
+          <svg
+            class="linkedin"
+            width="26"
+            height="26"
+            viewBox="0 0 26 26"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- ... (your existing LinkedIn SVG) ... -->
+          </svg>
+        </div>        
       </section>
       <section id="about">
+        <h1>About</h1>
         <!-- Content for the About section -->
+        
       </section>
     </main>
     <script src="./script.js"></script>
