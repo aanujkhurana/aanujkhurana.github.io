@@ -21,8 +21,8 @@
 
 .scroll-to-top-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 40px;
+  right: 40px;
   color: #ffffff;
   border: 2px solid white;
   border-radius: 50%;
@@ -31,7 +31,7 @@
   height: 3rem;
   font-size: 20px;
   cursor: none;
-  transition: transform 0.4s;
+  transition: transform 0.4s ease;
 }
 
 .scroll-to-top-btn:hover {
@@ -275,6 +275,20 @@ a:visited {
   height: 99px;
 }
 
+.bodytxt2 a {
+  font-weight: bold;
+  color: inherit;
+  cursor: none;
+  text-decoration: none;
+}
+
+.bodytxt2 a:hover {
+  color: #ff6262;
+  font-weight: bolder;
+  cursor: none;
+  transform: scale(1.2);
+}
+
 /* Projects */
 .projects {
   width: 100vw;
@@ -297,7 +311,7 @@ a:visited {
   width: 600px;
   position: absolute;
   top: 120px;
-  transition: background 0.3s ease; /* Add transition for a smooth color change */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   z-index: 1;
 }
 
@@ -318,7 +332,7 @@ a:visited {
   flex-shrink: 0;
   position: relative;
   cursor: pointer; /* Add cursor pointer for better UX */
-  transition: background 0.3s ease, color 0.3s ease; /* Add transition for a smooth color change */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Style for the active button */
@@ -661,3 +675,4 @@ input[type="submit"]:hover {
   transform: scale(1.05); /* Scale up the button on hover */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow on hover */
 }
+`
