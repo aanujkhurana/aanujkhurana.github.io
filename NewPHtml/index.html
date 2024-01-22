@@ -15,30 +15,30 @@
         <!-- Floating button -->
       <div id="scrollToTopBtn" class="scroll-to-top-btn" onclick="scrollToTop()">
         <svg
-          class="union"
-          width="12"
-          height="17.2"
-          viewBox="0 0 24 35"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M21.8475 13.8387C23.6293 13.8387 24.5216 11.6844 23.2617 10.4245L13.6276 0.790377C12.8465 0.00932867 11.5802 0.00932674 10.7991 0.790375L1.16499 10.4245C-0.0949381 11.6844 0.797394 13.8387 2.5792 13.8387H4.6141C5.71867 13.8387 6.6141 14.7342 6.6141 15.8387V32.8286C6.6141 33.9332 7.50953 34.8286 8.6141 34.8286H15.5224C16.627 34.8286 17.5224 33.9332 17.5224 32.8286V15.8387C17.5224 14.7342 18.4179 13.8387 19.5224 13.8387H21.8475Z"
-          />
-        </svg>
+        class="union"
+        width="24"
+        height="31"
+        viewBox="0 0 24 31"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.4142 1.41416C12.6332 0.633107 11.3668 0.633107 10.5858 1.41416L1.27208 10.7279C0.0121486 11.9878 0.904479 14.1421 2.68629 14.1421H8.00377C8.00126 14.2002 8 14.2586 8 14.3173V26.3173C8 28.5265 9.79086 30.3173 12 30.3173C14.2091 30.3173 16 28.5265 16 26.3173V14.3173C16 14.2586 15.9987 14.2002 15.9962 14.1421H21.3137C23.0955 14.1421 23.9879 11.9878 22.7279 10.7279L13.4142 1.41416Z"
+
+        />
+      </svg>
       </div>
       <!-- NAVBAR -->
       <nav class="nav" id="nav">
         <a href="#home">Home</a>/
         <a href="#projects">Projects</a>/
-        <a href="#contact">Contact</a>
+        <a href="#contact">Contact</a>/
+        <a href="#about">About</a>
       </nav>
       <!-- Sections -->
-      <section id="home">
+      <section id="home" class="current">
       <div class="home">
-        <div class="bodytxt"> Hello👋，<br />
+        <div class="bodytxt"> Hello 👋，<br />
           I am Anuj Khurana
           <div class="subline"><a href="#development-section">Software Developer</a> | <a href="#design-section">UI-UX Designer</a></div>
           <span class="bodytxt2">
@@ -46,7 +46,7 @@
               or check out <a href="#projects">my Projects</a>.
             </span>
         </div>
-        <img class="me" src="./me.png" />
+        <img class="me" id="meImage" src="./me.png" />
         <div class="download">
           Click below to download, <br>
           my colorless resume.
@@ -158,25 +158,25 @@
               mask="url(#path-1-outside-1_36_613)"
             />
             </svg>
+            <!-- // BG -->
+            <!-- Development Cards -->
             <div class="wrapper">
               <div class="container">
                   <input class="cardinput" type="radio" name="slide" id="c1" checked>
                   <label for="c1" class="card">
                       <div class="row">
-                          <div class="icon">1</div>
                           <div class="description">
-                              <h4>Winter</h4>
-                              <p>Winter has so much to offer -
-                              creative activities</p>
+                              <h4>Vue.js Tree Chart</h4>
+                              <p>Tree-like Chart Component Structure, with features like pan and zoom control,<br> 
+                                expand, and collapse of each node. A Highly customizable, full-featured Component Tree Chart</p>
                           </div>
                       </div>
                   </label>
                   <input class="cardinput" type="radio" name="slide" id="c2" >
                   <label for="c2" class="card">
                       <div class="row">
-                          <div class="icon">2</div>
                           <div class="description">
-                              <h4>Digital Technology</h4>
+                              <h4>Python - NSW Traffic Data Analysis App</h4>
                               <p>Gets better every day -
                               stay tuned</p>
                           </div>
@@ -185,9 +185,8 @@
                   <input class="cardinput" type="radio" name="slide" id="c3" >
                   <label for="c3" class="card">
                       <div class="row">
-                          <div class="icon">3</div>
                           <div class="description">
-                              <h4>Globalization</h4>
+                              <h4>Larvel MYSQL ECommerce-Website</h4>
                               <p>Help people all over the world</p>
                           </div>
                       </div>
@@ -195,16 +194,15 @@
                   <input class="cardinput" type="radio" name="slide" id="c4" >
                   <label for="c4" class="card">
                       <div class="row">
-                          <div class="icon">4</div>
                           <div class="description">
-                              <h4>New technologies</h4>
+                              <h4>SWift - Ios App</h4>
                               <p>Space engineering becomes
                               more and more advanced</p>
                           </div>
                       </div>
                   </label>
               </div>
-          </div>
+            </div>
           </section>
           <section id="design-section">
             <!-- Content for the Design section -->
@@ -368,6 +366,230 @@
           mask="url(#path-1-outside-1_105_882)"
         />
           </svg>
+        </div>
+      </section>
+      <section id="about">
+        <div class="about-card">
+          <div class="aboutbg">
+              <div class="about-txt">
+                <span>
+                  <span class="head-txt">
+                    Thank you for visiting
+                  </span>
+                  <span class="head-txtwhite">
+                    my portfolio!
+                  </span>
+                </span>
+                <div class="about-body-txt">
+                  I appreciate you taking the time to explore my journey, skills, and
+                  experiences. Feel free to reach out if you have any questions or if
+                  there&#039;s anything specific you&#039;d like to know
+                </div>
+                <span>
+                  <span class="head-txt">Few Words</span>
+                  <span class="head-txtwhite">About me</span>
+                </span>
+                <div class="about-body-txt">
+                  I pursued a Master&#039;s degree in Information Technology with a major in
+                  Software Development. Throughout my academic journey, I&#039;ve honed my
+                  skills in programming, web development, database design, and more. My major
+                  has provided me with a solid foundation in software engineering principles
+                  and practices.
+                  <br />
+                  <br />
+                  During my undergraduate years, I delved into the field of public relations
+                  through multiple internships. These experiences honed my communication and
+                  interpersonal skills. I learned the art of effective storytelling and
+                  relationship building, which, surprisingly, has proven invaluable in the
+                  tech world.
+                  <br />
+                  <br />
+                  Throughout my academic and professional journey, I&#039;ve had the privilege
+                  of engaging in various experiences that have shaped not only my skills but
+                  also my perspective on life and work.
+                  <br />
+                  <br />
+                  As I embark on my career journey, I carry with me the technical prowess,
+                  cross-disciplinary adaptability, and ethical awareness gained during my
+                  placement. These experiences have prepared me for the challenges and
+                  opportunities that lie ahead.
+                </div>
+                <div class="about-body2">
+                  <div class="line-2"></div>
+                  <div class="about-body3">
+                    <div>
+                      I&#039;m excited to continue learning, innovating, and contributing to the
+                      world of software development. My portfolio showcases my skills,
+                      experiences, and dedication to making a positive impact through technology.
+                      <br>
+                      Thank you for joining me on this journey!
+                    </div>
+                    <button class="btn-resumedownload">
+                      <svg
+                        class="pdf"
+                        width="21"
+                        height="28"
+                        viewBox="0 0 21 28"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13.7281 0.0234375H1.71562C0.76875 0.0234375 0 0.804688 0 1.77031V26.2297C0 27.1953 0.76875 27.9766 1.71562 27.9766H18.8719C19.8188 27.9766 20.5875 27.1953 20.5875 26.2297V7.01094L13.7281 0.0234375Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M19.3875 26.8578H1.20313V1.35156H13.0656V8.19219H19.3875V26.8578Z"
+                          fill="#353A84"
+                        />
+                        <path
+                          d="M19.3875 26.7546H1.20313V1.24838H13.0656V8.08588H19.3875V26.7546Z"
+                          fill="#FF7373"
+                        />
+                        <path
+                          d="M5.22813 18.2484C6.32501 18.2484 6.87188 18.714 6.87188 19.6484C6.87188 20.589 6.31563 21.0609 5.21251 21.0609H4.01876V22.8546H3.31563V18.2484H5.22813ZM4.02188 20.4609H5.16876C5.51563 20.4609 5.76876 20.3953 5.93126 20.2671C6.08751 20.139 6.16876 19.9328 6.16876 19.6484C6.16876 19.364 6.08438 19.1578 5.92501 19.0421C5.76251 18.914 5.51251 18.8484 5.16876 18.8484H4.02188V20.4609ZM9.20313 18.2484C9.94376 18.2484 10.5063 18.4546 10.8938 18.8734C11.2563 19.2609 11.4344 19.8203 11.4344 20.5515C11.4344 21.2734 11.2469 21.8359 10.8781 22.2359C10.4906 22.6484 9.93126 22.8546 9.18751 22.8546H7.52188V18.2484H9.20313ZM8.22813 22.2546H9.05938C9.64063 22.2546 10.0719 22.114 10.3438 21.8359C10.6094 21.5578 10.7438 21.1328 10.7438 20.5515C10.7438 19.9578 10.6094 19.5328 10.35 19.2609C10.0781 18.9828 9.65313 18.8484 9.07188 18.8484H8.22813V22.2546ZM15.2781 18.2484V18.8484H12.8531V20.189H15.1438V20.789H12.8531V22.8546H12.15V18.2484H15.2781Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <div class="downloadresume">Download Resume</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <svg
+          class="line-1"
+          width="16"
+          height="441"
+          viewBox="0 0 16 441"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M8 16V435" stroke="#353A84" stroke-linejoin="round" />
+          <path
+            d="M0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8Z"
+            fill="#353A84"
+          />
+          <path
+            d="M8.08333 10.0834C6.93274 10.0834 6 9.15061 6 8.00002C6 6.84943 6.93274 5.91669 8.08333 5.91669C9.23393 5.91669 10.1667 6.84943 10.1667 8.00002C10.1667 9.15061 9.23393 10.0834 8.08333 10.0834Z"
+            fill="#717EF1"
+          />
+          <path
+            d="M0 277.887C0 273.531 3.53119 270 7.88713 270H8.11287C12.4688 270 16 273.531 16 277.887C16 282.243 12.4688 285.774 8.11287 285.774H7.88713C3.53119 285.774 0 282.243 0 277.887Z"
+            fill="#353A84"
+          />
+          <path
+            d="M8.08333 279.941C6.93274 279.941 6 279.021 6 277.887C6 276.753 6.93274 275.833 8.08333 275.833C9.23393 275.833 10.1667 276.753 10.1667 277.887C10.1667 279.021 9.23393 279.941 8.08333 279.941Z"
+            fill="#717EF1"
+          />
+          <path
+            d="M0 432.887C0 428.531 3.53119 425 7.88713 425H8.11287C12.4688 425 16 428.531 16 432.887C16 437.243 12.4688 440.774 8.11287 440.774H7.88713C3.53119 440.774 0 437.243 0 432.887Z"
+            fill="#353A84"
+          />
+          <path
+            d="M8.08333 434.941C6.93274 434.941 6 434.021 6 432.887C6 431.753 6.93274 430.833 8.08333 430.833C9.23393 430.833 10.1667 431.753 10.1667 432.887C10.1667 434.021 9.23393 434.941 8.08333 434.941Z"
+            fill="#717EF1"
+          />
+          </svg>
+          <div class="experience">
+            <div class="heading">Experience</div>
+            <div class="organization">
+              <div class="exptitle">
+                <div class="Ldiv">
+                  <div class="expdate">Jul 23 - Oct 23</div>
+                  <div class="location">GoldCoast, Au</div>
+                </div>
+                <div class="company">
+                  <img class="Clogo" src="./img/logo/logo1.png" />
+                  <div class="Cdiv">
+                    <div class="Ctitle">Frontend Developer Intern</div>
+                    <div class="Cname">Gilmour Space Technologies</div>
+                  </div>
+                </div>
+              </div>
+              <div class="description">
+                Leveraged Vue.js and D3.js to deploy a Component Tree-Chart, markedly
+                enhancing visualizations and reducing user error rates by 25%.
+                <br />
+                <br />
+                Delivered a visually impactful solution, resulting in a commendable 20%
+                increase in user adoption.
+              </div>
+            </div>
+            <div class="organization">
+              <div class="exptitle">
+                <div class="Ldiv">
+                  <div class="expdate">Apr 22 - Aug 22</div>
+                  <div class="location">GoldCoast, Au</div>
+                </div>
+                <div class="company">
+                  <img class="Clogo" src="./img/logo/logo2.png" />
+                  <div class="Cdiv">
+                    <div class="Ctitle">IT Support</div>
+                    <div class="Cname">Go Golfing</div>
+                  </div>
+                </div>
+              </div>
+              <div class="description">
+                Spearheaded efforts to elevate Go Golfing&#039;s online visibility,
+                generating a commendable 15% increase in website traffic.
+                <br />
+                <br />
+                Conducted comprehensive updates and optimizations, yielding a significant
+                20% improvement in website loading speed.
+              </div>
+            </div>
+            <div class="organization">
+              <div class="exptitle">
+                <div class="Ldiv">
+                  <div class="expdate">March 20 - Jan 21</div>
+                  <div class="location">Delhi, India</div>
+                </div>
+                <div class="company">
+                  <img class="Clogo" src="./img/logo/logo3.png" />
+                  <div class="Cdiv">
+                    <div class="Ctitle">UI UX Developer</div>
+                    <div class="Cname">Goldfish Technologies</div>
+                  </div>
+                </div>
+              </div>
+              <div class="description">
+                Revamped a native iOS application, contributing to an impressive 4.0-star
+                rating on the App Store.
+                <br />
+                <br />
+                Collaborated on the development of client-side web applications, leading
+                to a substantial 30% increase in user interaction.
+              </div>
+            </div>
+            <div class="heading">Education</div>
+            <div class="education">
+              <div class="university">
+                <div class="unititle">
+                  Master of Information Technology - Software Development and Support
+                </div>
+                <div class="unidate">Dec 2023</div>
+                <div class="uni">
+                  <img class="logo" src="./img/logo/logo5.png" />
+                  <div class="uniname">Griffith Univetsity, Gold Coast, Australia</div>
+                </div>
+              </div>
+              <br>
+              <div class="university">
+                <div class="unititle">
+                  Bachelor of Arts -
+                  <br />
+                  Mass Communication
+                </div>
+                <div class="unidate">Mar 2018</div>
+                <div class="uni">
+                  <img class="logo" src="./img/logo/logo4.png" />
+                  <div class="uniname">GGSIP University, Delhi, India</div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="heading">Skills</div>       
+          </div>                    
         </div>
       </section>
     </main>

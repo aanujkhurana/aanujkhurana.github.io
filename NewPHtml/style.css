@@ -32,18 +32,15 @@
   font-size: 20px;
   cursor: none;
   transition: transform 0.4s ease;
+  z-index: 100;
 }
 
 .scroll-to-top-btn:hover {
   background: #FFF;
-  color: #ff6262;
+  fill: #ff6262;
   transform: scale(1.5);
 }
 
-.union,
-.union * {
-  box-sizing: border-box;
-}
 .union {
   border-radius: 0px;
   width: 23.28px;
@@ -77,10 +74,13 @@ h5,
   -webkit-font-smoothing: antialiased;
 }
 section {
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 body {
@@ -143,6 +143,7 @@ body {
   overflow: visible;
   top: -15%;
   right: 17.5%;
+  z-index: -2;
 }
 
 .me {
@@ -154,12 +155,11 @@ body {
   justify-content: center;
   left: 50%;
   bottom: -30%;
-  transition: opacity 3s ease-in-out; /* Set the duration and easing function as needed */
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
-
-/* New styles for hover effect */
-.me:hover {
-  opacity: 0.0; /* Adjust the desired opacity on hover */
+.me.fade-out {
+  opacity: 0;
 }
 
 .download {
@@ -198,12 +198,13 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   outline: none;
+  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.5);
 }
 
 .btn-resumedownload:hover {
-  background: #2c305e; /* Darken the background on hover */
-  transform: scale(1.05); /* Scale up the button on hover */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+  background-color: #ff6262;
 }
 
 .btn-resumedownload:focus {
@@ -221,7 +222,7 @@ body {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  border: 2px solid #ff6262; /* Change the color of the stroke on hover */
+  border: 2px solid #ffffff; /* Change the color of the stroke on hover */
   border-radius: 10px;
 }
 
@@ -253,13 +254,13 @@ body {
   text-decoration: none;
 }
 
-a:visited {
+.subline a:visited {
   color: inherit; /* or the color you want for visited links */
   text-decoration: none; /* or the text-decoration you want for visited links */
 }
 .subline a:hover {
   color: #ff6262;
-  font-weight: bolder;
+  font-weight: bold;
   cursor: none;
 }
 
@@ -284,9 +285,8 @@ a:visited {
 
 .bodytxt2 a:hover {
   color: #ff6262;
-  font-weight: bolder;
+  font-weight: bold;
   cursor: none;
-  transform: scale(1.2);
 }
 
 /* Projects */
@@ -302,16 +302,17 @@ a:visited {
 .Pselection {
   background: #353a84b4;
   border-radius: 8px;
-  padding: 6px 0px 6px 0px;
+  padding: 4px;
+  margin: 0;
   display: flex;
   flex-direction: row;
-  gap: 32px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
-  width: 600px;
+  width: 400px;
   position: absolute;
-  top: 120px;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  top: 80px;
+  transition: background-color 0.3s ease;
   z-index: 1;
 }
 
@@ -408,7 +409,6 @@ a:visited {
   display: flex;
   flex-wrap: nowrap;
   justify-content: start;
-  z-index: 1000;
 }
 
 .card {
@@ -423,42 +423,38 @@ a:visited {
   align-items: flex-end;
   transition: .6s cubic-bezier(.28,-0.03,0,.99);
   box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
-  position: sticky; /* Set position to sticky */
-  top: 10%; /* Adjust the top value as needed */
+  position: sticky;
+  top: 10%;
 }
 
 .card > .row {
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: #ff7373;
   display: flex;
   flex-wrap: nowrap;
-}
-
-.card > .row > .icon {
-  background: #223;
-  color: white;
-  border-radius: 50%;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
+  padding: 0;
 }
 
 .card > .row > .description {
   display: flex;
   justify-content: center;
+  align-items: start;
   flex-direction: column;
   overflow: hidden;
-  height: 80px;
-  width: 520px;
+  height: 110px;
+  width: 580px;
   opacity: 0;
   transform: translateY(30px);
   transition-delay: .3s;
   transition: all .3s ease;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Actor", sans-serif;
 }
 
 .description p {
-  color: #b0b0ba;
+  color: #353a84;
   padding-top: 5px;
 }
 
@@ -492,16 +488,16 @@ a:visited {
   background-image: url('./img1.jpg');
 }
 .card[for="d1"] {
-  background-image: url('./img1.jpg');
+  background-image: url('./img/img1.png');
 }
 .card[for="d2"] {
-  background-image: url('./img1.jpg');
+  background-image: url('./img/img2.png');
 }
 .card[for="d3"] {
-  background-image: url('./img1.jpg');
+  background-image: url('./img/img3.png');
 }
 .card[for="d4"] {
-  background-image: url('./img1.jpg');
+  background-image: url('./img/img4.png');
 }
 
 .contact-bg {
@@ -565,7 +561,7 @@ a:visited {
 .email:hover {
   font-size: 20px; /* Adjust the desired font size on hover */
   text-decoration: underline;
-  color: #73faff; /* Adjust the desired hover color */
+  color: #adfff8; /* Adjust the desired hover color */
 }
 
 
@@ -667,12 +663,313 @@ input[type="submit"] {
   cursor: pointer;
   border-radius: 8px;
   outline: none;
+  box-shadow:  0px 10px 30px -5px rgba(0,0,0,1);
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 input[type="submit"]:hover {
-  background: #ff6262; /* Darken the background on hover */
-  transform: scale(1.05); /* Scale up the button on hover */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow on hover */
+  background: #ff6262; 
+  transform: scale(1.05);
+  box-shadow:  0px 10px 30px -5px rgba(0,0,0,0.8);
 }
-`
+
+/* about section */
+
+.about-card {
+  border-style: solid;
+  border-color: #717ef1;
+  border-width: 2px 2px 2px 2px;
+  width: 1300px;
+  height: 800px;
+  position: relative;
+  border-radius: 18px;
+  top: 25%;
+}
+
+.aboutbg {
+  background: #151d6b;
+  border-radius: 18px;
+  width: 640px;
+  height: 800px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: flex;
+}
+
+.about-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  margin: 60px;
+}
+
+.head-txtwhite {
+  text-align: right;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  
+}
+.head-txt {
+  color: #ff7373;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.about-body-txt {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Actor", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  width: 520px;
+}
+
+.about-body2 {
+  display: flex;
+  flex-direction: row;
+  gap: 44px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.about-body3 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  color: #ffffff;
+  text-align: left;
+  font-family: "Actor", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  position: relative;
+  width: 420px;
+}
+
+.line-1 {
+  height: auto;
+  position: relative;
+  overflow: visible;
+  left: 632px;
+  top: 84px;
+}
+
+.line-2 {
+  background: #717ef1;
+  flex-shrink: 0;
+  width: 2px;
+  height: 110px;
+  position: relative;
+}
+
+/* Experience */
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  margin: 40px;
+  left: 50%;
+  top: -50%;
+}
+.heading {
+  color: #ff7373;
+  text-align: left;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+}
+.organization {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.exptitle {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.Ldiv {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.expdate {
+  color: #acb1c3;
+  text-align: left;
+  font-family: "Actor", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.location {
+  color: #acb1c3;
+  text-align: left;
+  font-family: "Actor", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.company {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.Cdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.Cname {
+  color: #acb1c3;
+  text-align: left;
+  font-family: "Actor", sans-serif;
+  font-size: 12px;
+  line-height: 8px;
+  font-weight: 700;
+  position: relative;
+  width: 144px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.Ctitle {
+  color: #e2e6ee;
+  text-align: left;
+  font-family: "Actor", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  position: relative;
+  width: 172px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.description {
+  color: #acb1c3;
+  text-align: left;
+  font-family: "Actor", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  position: relative;
+  width: 344px;
+  height: 64px;
+}
+
+.Clogo {
+  border-radius: 4px;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  object-fit: cover;
+}
+
+/* education */
+.education {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.university {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.unititle {
+  color: #e2e6ee;
+  text-align: left;
+  font-family: "Actor", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  position: relative;
+  width: 240px;
+}
+.unidate {
+  color: #acb1c3;
+  text-align: center;
+  font-family: "Actor", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+}
+.uni {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.logo {
+  border-radius: 4px;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  object-fit: cover;
+}
+.uniname {
+  color: #e2e6ee;
+  text-align: left;
+  font-family: "Actor", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  position: relative;
+}

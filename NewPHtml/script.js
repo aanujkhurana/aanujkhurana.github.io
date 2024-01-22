@@ -31,33 +31,11 @@ function scrollToTop() {
 // Show/hide the scroll-to-top button based on scroll position
 document.addEventListener('scroll', function() {
     var scrollButton = document.getElementById('scrollToTopBtn');
-    if (window.scrollY > 300) {
+    if (window.scrollY > 850) {
     scrollButton.style.display = 'block';
     } else {
     scrollButton.style.display = 'none';
     }
-});
-
-// For Nav Links active color
-document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav a");
-
-    function updateActiveLink() {
-    const fromTop = window.scrollY;
-
-    sections.forEach((section, index) => {
-        if (
-        section.offsetTop <= fromTop + 50 &&
-        section.offsetTop + section.offsetHeight > fromTop + 50
-        ) {
-        navLinks.forEach((link) => link.classList.remove("active"));
-        navLinks[index].classList.add("active");
-        }
-    });
-    }
-    window.addEventListener("scroll", updateActiveLink);
-    window.addEventListener("resize", updateActiveLink);
 });
 
 // FOR PROJECTS SECTION TOGGLE DESIGN and DEVELOPMENT
@@ -103,3 +81,51 @@ function toggleSection(sectionId) {
 window.onload = function () {
     toggleSection('development-section');
 };
+
+// Home Section Fade out animation
+document.addEventListener("DOMContentLoaded", function () {
+    const home = document.getElementById('meImage');
+
+    function fadeOutImage() {
+    const scrollPosition = window.scrollY;
+    const triggerPosition = 0;
+
+    if (scrollPosition >= triggerPosition) {
+        home.style.opacity = 1 - (scrollPosition - triggerPosition) / 100;
+    } else {
+        home.style.opacity = 1;
+    }
+    }
+    window.addEventListener('scroll', fadeOutImage);
+});
+
+
+// smooth nav scroll
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+const navLinks = document.querySelectorAll('nav a');
+const spanLink = document.querySelector('span a');
+
+function attachClickEvent(element) {
+    element.addEventListener('click', function (event) {
+    event.preventDefault();
+    const targetSectionId = this.getAttribute('href').substring(1);
+    scrollToSection(targetSectionId);
+    });
+}
+
+navLinks.forEach(link => {
+    attachClickEvent(link);
+});
+
+if (spanLink) {
+    attachClickEvent(spanLink);
+}
+});
