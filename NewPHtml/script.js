@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const triggerPosition = 0;
 
     if (scrollPosition >= triggerPosition) {
-        home.style.opacity = 1 - (scrollPosition - triggerPosition) / 100;
+        home.style.opacity = 1 - (scrollPosition - triggerPosition) / 200;
     } else {
         home.style.opacity = 1;
     }

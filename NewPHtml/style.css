@@ -16,7 +16,7 @@
 
 .circle.big {
   background: white;
-  transform: scale(2);
+  transform: scale(2);`
 }
 
 .scroll-to-top-btn {
@@ -41,7 +41,7 @@
   transform: scale(1.5);
 }
 
-.union {
+.arrow-icon {
   border-radius: 0px;
   width: 23.28px;
   height: 34.62px;
@@ -51,7 +51,7 @@
   overflow: visible;
   fill: #FFF
 }
-.union:hover {
+.arrow-icon:hover {
   fill: #ff6262;
 }
 
@@ -73,6 +73,12 @@ h5,
   background: none;
   -webkit-font-smoothing: antialiased;
 }
+
+a:visited {
+  color: inherit; 
+  text-decoration: none; 
+}
+
 section {
   height: 100vh;
   display: flex;
@@ -116,7 +122,6 @@ body {
 }
 .nav a:hover {
   color: #ff6262;
-  text-decoration: underline;
   font-weight: bolder;
   cursor: none;
 }
@@ -173,7 +178,7 @@ body {
   top: 542px;
   color: #ffffff;
   text-align: left;
-  font-family: "Advent Pro", sans-serif;
+  font-family: "Actor", sans-serif;
   font-size: 14px;
   line-height: 133.2%;
   font-weight: 400;
@@ -185,7 +190,7 @@ body {
   padding: 6px 10px 6px 10px;
   display: flex;
   flex-direction: row;
-  gap: 4px;
+  gap: 6px;
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
@@ -193,8 +198,8 @@ body {
   color: #ffffff;
   text-align: left;
   font-family: "Advent Pro", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 700;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   outline: none;
@@ -202,7 +207,7 @@ body {
 }
 
 .btn-resumedownload:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
   box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
   background-color: #ff6262;
 }
@@ -222,7 +227,7 @@ body {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  border: 2px solid #ffffff; /* Change the color of the stroke on hover */
+  border: 2px solid #ffffff; 
   border-radius: 10px;
 }
 
@@ -251,33 +256,29 @@ body {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 2.8px;
-  text-decoration: none;
+  text-decoration: none;;
 }
 
-.subline a:visited {
-  color: inherit; /* or the color you want for visited links */
-  text-decoration: none; /* or the text-decoration you want for visited links */
-}
 .subline a:hover {
   color: #ff6262;
-  font-weight: bold;
+  font-weight: 800;
   cursor: none;
 }
 
 .bodytxt2 {
   color: #ffffff;
   text-align: left;
-  font-family: "Advent Pro", sans-serif;
+  font-family: "Actor", sans-serif;
   font-size: 16px;
-  line-height: 155.32%;
-  font-weight: 400;
+  line-height: 155%;
+  font-weight: 500;
   position: relative;
-  width: 278px;
-  height: 99px;
+  width: 282px;
+  height: 100px;
 }
 
 .bodytxt2 a {
-  font-weight: bold;
+  font-weight: 600;
   color: inherit;
   cursor: none;
   text-decoration: none;
@@ -285,7 +286,7 @@ body {
 
 .bodytxt2 a:hover {
   color: #ff6262;
-  font-weight: bold;
+  font-weight: 800;
   cursor: none;
 }
 
@@ -301,24 +302,23 @@ body {
 }
 .Pselection {
   background: #353a84b4;
-  border-radius: 8px;
-  padding: 4px;
+  border-radius: 6px;
+  padding: 6px;
   margin: 0;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
   justify-content: center;
-  width: 400px;
+  width: 360px;
   position: absolute;
   top: 80px;
   transition: background-color 0.3s ease;
   z-index: 1;
 }
 
-/* Add hover effect to change background color on hover */
 .Pselection:hover {
-  background: #353a84; /* Change this to the desired hover background color */
+  background: #1d20510f;
 }
 
 .bttn,
@@ -332,8 +332,13 @@ body {
   justify-content: center;
   flex-shrink: 0;
   position: relative;
-  cursor: pointer; /* Add cursor pointer for better UX */
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; 
+  color: #ffffff;
+  text-align: center;
+  font-family: "Actor", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
 }
 
 /* Style for the active button */
@@ -341,22 +346,14 @@ body {
 .bttn2.active {
   background: #1d2051; /* Change this to the desired active button background color */
   color: #ffffff; /* Change this to the desired active button text color */
-  border: 2px solid #ff6262;
+  font-weight: 900;
 }
 
 .bttn:hover,
 .bttn2:hover {
   background: #1d2051; /* Change this to the desired hover background color */
   color: #ffffff; /* Change this to the desired hover text color */
-}
-
-.txt {
-  color: #ffffff;
-  text-align: center;
-  font-family: "Actor", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  position: relative;
+  border: 2px solid #ff6262;
 }
 
 .development {
@@ -408,17 +405,18 @@ body {
   height: 400px;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: start;
+  justify-content: center;
+  width: 1200px;
 }
 
 .card {
-  width: 80px;
+  width: 100px;
   border-radius: .75rem;
   background-size: cover;
   cursor: pointer;
   overflow: hidden;
   border-radius: 2rem;
-  margin: 0 10px;
+  margin: 10px;
   display: flex;
   align-items: flex-end;
   transition: .6s cubic-bezier(.28,-0.03,0,.99);
@@ -785,7 +783,7 @@ input[type="submit"]:hover {
   position: relative;
   margin: 40px;
   left: 50%;
-  top: -50%;
+  top: 4%;
 }
 .heading {
   color: #ff7373;
@@ -890,7 +888,7 @@ input[type="submit"]:hover {
   align-items: center;
   justify-content: flex-start;
 }
-.description {
+.expdescription {
   color: #acb1c3;
   text-align: left;
   font-family: "Actor", sans-serif;
@@ -972,4 +970,161 @@ input[type="submit"]:hover {
   line-height: 16px;
   font-weight: 700;
   position: relative;
+}
+
+/* skills */
+.skills {
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+.skill-devlopment-div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  height: 161px;
+  position: relative;
+}
+.dev {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.dev-icon {
+  border-radius: 0px;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  overflow: visible;
+}
+.skilltitle {
+  color: #e2e6ee;
+  text-align: left;
+  font-family: "DmSans-Medium", sans-serif;
+  font-size: 12px;
+  line-height: 9px;
+  font-weight: 500;
+  position: relative;
+}
+.dev-skills {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  width: 188px;
+  height: 132px;
+  position: relative;
+}
+.skill-list {
+  color: #95aafb;
+  text-align: left;
+  font-family: "DmSans-Medium", sans-serif;
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.skill-list2 {
+  color: #95aafb;
+  text-align: left;
+  font-family: "DmSans-Medium", sans-serif;
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: 500;
+  position: relative;
+}
+.divider {
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1);
+  border-width: 1px;
+  flex-shrink: 0;
+  width: 5px;
+  height: 159px;
+  position: relative;
+}
+.skill-design-div {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 199px;
+  height: 159px;
+  position: relative;
+}
+.des {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.des-icon {
+  border-radius: 0px;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  overflow: visible;
+}
+.des-skills {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  width: 188px;
+  height: 130px;
+  position: relative;
+}
+
+/* footer */
+.footer {
+  position: relative;
+  width: 100%;
+  background: #151d6b;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  color: #95aafb;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
 }
