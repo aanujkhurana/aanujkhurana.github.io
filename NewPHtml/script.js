@@ -129,3 +129,15 @@ if (spanLink) {
     attachClickEvent(spanLink);
 }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var navbar = document.getElementById("nav");
+
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 120) {
+            navbar.style.backgroundColor = "rgba(18, 11, 79, 0.7)";
+        } else {
+            navbar.style.backgroundColor = "transparent";
+        }
+    });
+});

@@ -16,7 +16,7 @@
 
 .circle.big {
   background: white;
-  transform: scale(2);`
+  transform: scale(2);
 }
 
 .scroll-to-top-btn {
@@ -101,14 +101,14 @@ body {
   position: fixed;
   top: 0;
   left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
+  transform: translateX(-50%);
   display: flex;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
   justify-content: center;
   color: white;
-  z-index: 1;
   transition: background-color 1.0s ease;
+  z-index: 1;
 }
 .nav.scrolled {
   background-color: #120B4F
@@ -118,7 +118,7 @@ body {
   text-decoration: none;
   color: white;
   font-family: "Actor", sans-serif;
-  font-weight: medium;
+  font-weight: 700;
 }
 .nav a:hover {
   color: #ff6262;
@@ -210,6 +210,7 @@ body {
   transform: scale(1.07);
   box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
   background-color: #ff6262;
+  box-shadow: 0px 10px 30px -5px rgba(255, 255, 255, 0.5);
 }
 
 .btn-resumedownload:focus {
@@ -250,10 +251,10 @@ body {
 
 .subline {
   color: rgba(255, 255, 255, 0.46);
-  font-family: "Actor", sans-serif;
+  font-family: "Advent Pro", sans-serif;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
   letter-spacing: 2.8px;
   text-decoration: none;;
@@ -474,16 +475,16 @@ body {
 }
 
 .card[for="c1"] {
-  background-image: url('./img1.jpg');
+  background-image: url('./img1.png');
 }
 .card[for="c2"] {
-  background-image: url('./img1.jpg');
+  background-image: url('./img1.png');
 }
 .card[for="c3"] {
-  background-image: url('./img1.jpg');
+  background-image: url('./img1.png');
 }
 .card[for="c4"] {
-  background-image: url('./img1.jpg');
+  background-image: url('./img1.png');
 }
 .card[for="d1"] {
   background-image: url('./img/img1.png');
@@ -668,7 +669,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background: #ff6262; 
   transform: scale(1.05);
-  box-shadow:  0px 10px 30px -5px rgba(0,0,0,0.8);
+  box-shadow: 0px 10px 30px -5px rgba(255, 255, 255, 0.3);
 }
 
 /* about section */
@@ -1011,10 +1012,10 @@ input[type="submit"]:hover {
 .skilltitle {
   color: #e2e6ee;
   text-align: left;
-  font-family: "DmSans-Medium", sans-serif;
+  font-family: "Actor", sans-serif;
   font-size: 12px;
-  line-height: 9px;
-  font-weight: 500;
+  line-height: 10px;
+  font-weight: 700;
   position: relative;
 }
 .dev-skills {
@@ -1032,10 +1033,10 @@ input[type="submit"]:hover {
 .skill-list {
   color: #95aafb;
   text-align: left;
-  font-family: "DmSans-Medium", sans-serif;
+  font-family: "Actor", sans-serif;
   font-size: 11px;
   line-height: 12px;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   display: flex;
   align-items: center;
@@ -1044,10 +1045,10 @@ input[type="submit"]:hover {
 .skill-list2 {
   color: #95aafb;
   text-align: left;
-  font-family: "DmSans-Medium", sans-serif;
+  font-family: "Actor", sans-serif;
   font-size: 11px;
   line-height: 12px;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
 }
 .divider {
