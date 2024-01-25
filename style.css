@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Advent+Pro);
 @import url(https://fonts.googleapis.com/css?family=Actor);
+
+
 /* mouse pointer */
 .circle {
   border: 2px solid white;
@@ -80,6 +82,7 @@ h5,
   appearance: none;
   background: none;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a:visited {
