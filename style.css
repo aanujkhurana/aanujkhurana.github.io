@@ -489,28 +489,28 @@ section {
 }
 
 .card[for="c1"] {
-  background-image: url('./img1.png');
+  background-image: url('./img/dev/img1.png');
 }
 .card[for="c2"] {
-  background-image: url('./img2.jpg');
+  background-image: url('./img/dev/img2.jpg');
 }
 .card[for="c3"] {
-  background-image: url('./img3.png');
+  background-image: url('./img/dev/img3.png');
 }
 .card[for="c4"] {
-  background-image: url('./img1.png');
+  background-image: url('./img/des/img1.png');
 }
 .card[for="d1"] {
-  background-image: url('./img/img1.png');
+  background-image: url('./img/des/img1.png');
 }
 .card[for="d2"] {
-  background-image: url('./img/img2.png');
+  background-image: url('./img/des/img2.png');
 }
 .card[for="d3"] {`
-  background-image: url('./img/img3.png');
+  background-image: url('./img/des/img3.png');
 }
 .card[for="d4"] {
-  background-image: url('./img/img4.png');
+  background-image: url('./img/des/img4.png');
 }
 
 .contact-bg {
