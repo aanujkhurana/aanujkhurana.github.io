@@ -82,15 +82,22 @@ h5,
   appearance: none;
   background: none;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
+a:link { 
+  color:inherit;
+}
+
 a:visited {
   color: inherit; 
-  text-decoration: none; `
+  text-decoration: none; 
+}
+
+a:active {
+  color: inherit;
 }
 
 section {
@@ -102,7 +109,6 @@ section {
   left: 0;
   width: 100%;
 }
-
 
 .nav {
   width: 100%;
@@ -137,7 +143,6 @@ section {
   text-decoration: none;
   font-family: "Actor", sans-serif;
 }
-
 
 .home {
   width: 100vw;
@@ -187,7 +192,7 @@ section {
   top: 542px;
   color: #ffffff;
   text-align: left;
-  font-family: "Actor", sans-serif;
+  font-family: "Advent Pro", sans-serif;
   font-size: 14px;
   line-height: 133.2%;
   font-weight: 400;
@@ -259,9 +264,9 @@ section {
 }
 
 .subline {
-  color: rgba(255, 255, 255, 0.46);
+  color: rgba(255, 255, 255, 0.5);
   font-family: "Advent Pro", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -271,12 +276,12 @@ section {
 
 .subline a:hover {
   color: #ff6262;
-  font-weight: 800;
+  font-weight: 700;
   cursor: none;
 }
 
 .bodytxt2 {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
   text-align: left;
   font-family: "Actor", sans-serif;
   font-size: 16px;
@@ -289,14 +294,13 @@ section {
 
 .bodytxt2 a {
   font-weight: 600;
-  color: inherit;
   cursor: none;
   text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .bodytxt2 a:hover {
   color: #ff6262;
-  font-weight: 800;
   cursor: none;
 }
 
