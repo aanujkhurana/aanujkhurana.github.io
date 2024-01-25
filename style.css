@@ -83,11 +83,14 @@ h5,
   background: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 a:visited {
   color: inherit; 
-  text-decoration: none; 
+  text-decoration: none; `
 }
 
 section {
