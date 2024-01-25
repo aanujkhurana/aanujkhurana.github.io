@@ -100,44 +100,74 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// smooth nav scroll
+/// smooth nav scroll
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
 
     if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
+        section.scrollIntoView({ behavior: 'smooth' });
     }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-const navLinks = document.querySelectorAll('nav a');
-const spanLink = document.querySelector('span a');
+    const navLinks = document.querySelectorAll('nav a');
+    const spanLinks = document.querySelectorAll('.subline a, .bodytxt2 a');
 
-function attachClickEvent(element) {
-    element.addEventListener('click', function (event) {
-    event.preventDefault();
-    const targetSectionId = this.getAttribute('href').substring(1);
-    scrollToSection(targetSectionId);
+    function attachClickEvent(element) {
+        element.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetSectionId = this.getAttribute('href').substring(1);
+            scrollToSection(targetSectionId);
+        });
+    }
+
+    navLinks.forEach(link => {
+        attachClickEvent(link);
     });
-}
 
-navLinks.forEach(link => {
-    attachClickEvent(link);
+    spanLinks.forEach(link => {
+        attachClickEvent(link);
+    });
 });
 
-if (spanLink) {
-    attachClickEvent(spanLink);
-}
-});
 
+// nav bg on scroll
 document.addEventListener("DOMContentLoaded", function() {
     var navbar = document.getElementById("nav");
 
     window.addEventListener("scroll", function() {
         if (window.scrollY > 120) {
-            navbar.style.backgroundColor = "rgba(18, 11, 79, 0.7)";
+            navbar.style.backgroundColor = "rgba(18, 11, 79, 1)";
         } else {
             navbar.style.backgroundColor = "transparent";
         }
     });
+});
+
+// nav bar text color 
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.nav a');
+
+    function highlightNavLink() {
+        const scrollPosition = window.scrollY;
+
+        sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navLinks.forEach((link) => {
+                    link.classList.remove('active');
+                });
+
+                navLinks[index].classList.add('active');
+            }
+        });
+    }
+
+    document.addEventListener('scroll', highlightNavLink);
+
+    // Initial call to set the active section on page load
+    highlightNavLink();
 });
