@@ -171,3 +171,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial call to set the active section on page load
     highlightNavLink();
 });
+
+
+// resume download
+var buttons = document.querySelectorAll('.btn-resumedownload');
+
+buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        var link = document.createElement('a');
+        link.href = 'https://aanujkhurana.github.io/resume/anujkhurana.pdf';
+        link.target = '_blank'; // Open in a new tab or window
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+});
