@@ -454,8 +454,8 @@ section {
   align-items: start;
   flex-direction: column;
   overflow: hidden;
-  height: 110px;
-  width: 580px;
+  height: 100px;
+  width: 5840px;
   opacity: 0;
   transform: translateY(30px);
   transition-delay: .3s;
@@ -468,7 +468,7 @@ section {
 
 .description p {
   color: #353a84;
-  padding-top: 5px;
+  padding: 5px;
 }
 
 .description h4 {
@@ -498,16 +498,16 @@ section {
   background-image: url('./img/dev/img3.png');
 }
 .card[for="c4"] {
-  background-image: url('./img/des/img1.png');
+  background-image: url('./img/dev/img3.png');
 }
 .card[for="d1"] {
-  background-image: url('./img/des/img1.png');
+  background-image: url('./img/des/img3.png');
 }
 .card[for="d2"] {
-  background-image: url('./img/des/img2.png');
+  background-image: url('./img/des/img1.png');
 }
-.card[for="d3"] {`
-  background-image: url('./img/des/img3.png');
+.card[for="d3"] {
+  background-image: url('./img/des/img2.png');
 }
 .card[for="d4"] {
   background-image: url('./img/des/img4.png');
