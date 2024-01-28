@@ -186,3 +186,56 @@ buttons.forEach(function(button) {
         document.body.removeChild(link);
     });
 });
+
+
+// form submission //
+function clearForm() {
+    // Get the form element by its ID
+    var form = document.getElementById('myForm');
+
+    // Reset the form to clear the text fields
+    form.reset();
+}
+
+async function handleSubmit(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    // Get form data using FormData object
+    var form = document.getElementById('myForm');
+    var formData = new FormData(form);
+
+    // Perform any additional actions you need here
+    console.log('Form data:', formData);
+
+    // Clear the form
+    clearForm();
+
+    // Manually submit the form using fetch
+    try {
+        const response = await fetch('https://formspree.io/f/mqkrewbn', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        if (response.ok) {
+            console.log('Form submitted successfully');
+
+            // Display success overlay
+            document.getElementById('overlay').style.display = 'flex';
+
+            // Hide overlay after 3 seconds
+            setTimeout(function () {
+                document.getElementById('overlay').style.display = 'none';
+            }, 3000);
+        } else {
+            console.error('Error submitting form:', response.statusText);
+            // Handle error if needed
+        }
+    } catch (error) {
+        console.error('Error submitting form:', error.message);
+        // Handle error if needed
+    }
+}

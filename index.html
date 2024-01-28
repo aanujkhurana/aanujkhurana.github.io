@@ -28,7 +28,11 @@
         />
       </svg>
       </div>
-      <!-- NAVBAR -->
+      <!-- Success message element -->
+      <div id="overlay">
+        <div id="successMessage">🥳 Thanks! I will get back soon</div>
+      </div>
+      <!-- NAVBAR -->       
       <nav class="nav" id="nav">
         <a href="#home">Home</a>/
         <a href="#projects">Projects</a>/
@@ -411,13 +415,12 @@
       <section id="contact" class="section">
         <!-- Content for the Contact section -->
         <div class="contact-card">
-          <form  action="https://formspree.io/f/mqkrewbn"
-          method="POST">
-            <input type="text" id="name" name="name" placeholder="Name" required>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
+          <form id="myForm" action="https://formspree.io/f/mqkrewbn" method="POST" onsubmit="handleSubmit(event)">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Message" rows="4" required></textarea>
             <input type="submit" value="Submit">
-          </form>
+        </form>
           <div class="cardbg-2"></div>
           <div class="gold-coast-australia">Gold Coast, Australia</div>
           <a href="mailto:aanujkhurana@gmail.com"><div class="email">aanujkhurana@gmail.com</div></a>
