@@ -368,6 +368,7 @@ section {
   background: #1d2051; /* Change this to the desired hover background color */
   color: #ffffff; /* Change this to the desired hover text color */
   border: 2px solid #ff6262;
+  box-shadow: 0px 10px 30px -5px rgba(255, 255, 255, 0.4);
 }
 
 .development {
@@ -445,11 +446,12 @@ section {
 }
 
 .card > .row {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.7);
   color: #ff7373;
   display: flex;
   flex-wrap: nowrap;
   padding: 0;
+  backdrop-filter: blur(20px);
 }
 
 .card > .row > .description {
@@ -471,7 +473,7 @@ section {
 .description p {
   color: #353a84;
   padding: 5px;
-  font-size: 11px;`
+  font-size: 11px;
 }
 
 .description h4 {
@@ -541,19 +543,21 @@ section {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
-
+/* dev imgs */
 .card[for="c1"] {
-  background-image: url('./img/dev/img1.png');
+  background-image: url('./img/dev/img.png');
 }
 .card[for="c2"] {
   background-image: url('./img/dev/img2.jpg');
 }
 .card[for="c3"] {
-  background-image: url('./img/dev/img3.png');
+  background-image: url('./img/dev/img4.jpg');
 }
 .card[for="c4"] {
   background-image: url('./img/dev/img3.png');
 }
+
+/* design imgs */
 .card[for="d1"] {
   background-image: url('./img/des/img3.png');
 }
@@ -667,27 +671,29 @@ section {
   top: 58px;
 }
 
-.github, .linkedin {
+.github, .linkedin, .behance {
   height: auto;
   position: absolute;
   overflow: visible;
   bottom: 45%;
   top: 50%;
-  width: 3%;
-  height: 6%;
   fill: white;
 }
 
 .github {
+  right: 18%;
+  left: 78%;
+}
+.linkedin {
   right: 12%;
   left: 84%;
 }
-.linkedin {
+.behance{
   right: 6%;
   left: 90%;
 }
 
-.github:hover, .linkedin:hover {
+.github:hover, .linkedin:hover, .behance:hover {
   transform: scale(1.7); 
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
   cursor: pointer;
@@ -944,6 +950,12 @@ input[type="submit"]:hover {
   align-items: center;
   justify-content: flex-start;
 }
+
+.Cname a:hover {
+  color: #ff6262;
+  cursor: none;
+}
+
 .Ctitle {
   color: #e2e6ee;
   text-align: left;
@@ -1039,6 +1051,11 @@ input[type="submit"]:hover {
   line-height: 16px;
   font-weight: 700;
   position: relative;
+}
+
+.uniname a:hover {
+  color: #ff6262;
+  cursor: none;
 }
 
 /* skills */
