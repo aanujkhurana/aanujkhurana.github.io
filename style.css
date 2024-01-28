@@ -65,7 +65,7 @@
   border-radius: 24px;
   border-style: solid;
   border-color: #95aafb;
-  border-width: 2px;`
+  border-width: 2px;
   width: 450px;
   height: 200px;
   background: rgba(20, 14, 79, 0.7);
@@ -78,7 +78,7 @@
 }
 
 /* Style for the success message */
-#successMessage {
+#successMessage {`
   color: #95aafb;
   padding: 20px;
   border-radius: 10px;
