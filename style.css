@@ -122,7 +122,7 @@
 /* style start here */
 body {
   margin: 0;
-  background: var(--bg, linear-gradient(180deg, rgba(18, 11, 79, 1) 100%, rgba(31, 37, 81, 1) 100%));
+  background: linear-gradient(180deg, rgba(18, 11, 79, 1) 100%, rgba(31, 37, 81, 1) 100%);
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
