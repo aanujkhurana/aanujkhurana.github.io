@@ -195,7 +195,7 @@ section {
 .nav a {
   text-decoration: none;
   font-family: "Actor", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .nav a:hover {
@@ -932,7 +932,7 @@ input[type="submit"]:hover {
   font-family: "Advent Pro", sans-serif;
   font-size: 18px;
   line-height: 16px;
-  font-weight: 700;
+  font-weight: 600;
   position: relative;
   display: flex;
 }
@@ -968,7 +968,7 @@ input[type="submit"]:hover {
   text-align: left;
   font-family: "Actor", sans-serif;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 400;
   position: relative;
   display: flex;
   align-items: center;
@@ -979,7 +979,7 @@ input[type="submit"]:hover {
   text-align: left;
   font-family: "Actor", sans-serif;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 400;
   position: relative;
   display: flex;
   align-items: center;
@@ -1009,7 +1009,7 @@ input[type="submit"]:hover {
   font-family: "Actor", sans-serif;
   font-size: 12px;
   line-height: 8px;
-  font-weight: 700;
+  font-weight: 500;
   position: relative;
   width: 144px;
   display: flex;
@@ -1028,7 +1028,7 @@ input[type="submit"]:hover {
   font-family: "Actor", sans-serif;
   font-size: 14px;
   line-height: 14px;
-  font-weight: 600;
+  font-weight: 400;
   position: relative;
   width: 172px;
   display: flex;
@@ -1040,7 +1040,7 @@ input[type="submit"]:hover {
   text-align: left;
   font-family: "Actor", sans-serif;
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 400;
   position: relative;
   width: 344px;
   height: 64px;
@@ -1080,7 +1080,7 @@ input[type="submit"]:hover {
   font-family: "Actor", sans-serif;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 700;
+  font-weight: 500;
   position: relative;
   width: 240px;
 }
@@ -1089,7 +1089,7 @@ input[type="submit"]:hover {
   text-align: center;
   font-family: "Actor", sans-serif;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
   position: relative;
 }
 .uni {
@@ -1115,7 +1115,7 @@ input[type="submit"]:hover {
   font-family: "Actor", sans-serif;
   font-size: 12px;
   line-height: 16px;
-  font-weight: 700;
+  font-weight: 600;
   position: relative;
 }
 
@@ -1166,7 +1166,7 @@ input[type="submit"]:hover {
   font-family: "Actor", sans-serif;
   font-size: 12px;
   line-height: 10px;
-  font-weight: 700;
+  font-weight: 500;
   position: relative;
 }
 .dev-skills {
@@ -1187,21 +1187,13 @@ input[type="submit"]:hover {
   font-family: "Actor", sans-serif;
   font-size: 11px;
   line-height: 12px;
-  font-weight: 600;
+  font-weight: 400;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.skill-list2 {
-  color: rgb(177, 177, 177);
-  text-align: left;
-  font-family: "Actor", sans-serif;
-  font-size: 11px;
-  line-height: 12px;
-  font-weight: 600;
-  position: relative;
-}
+
 .divider {
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.1);

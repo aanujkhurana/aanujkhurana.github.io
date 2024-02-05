@@ -1,6 +1,5 @@
 // script.js
 
-
 // bg animation 
 document.addEventListener('DOMContentLoaded', () => {
     const interBubble = document.querySelector('.interactive');
@@ -55,7 +54,7 @@ function scrollToTop() {
 // Show/hide the scroll-to-top button based on scroll position
 document.addEventListener('scroll', function() {
     var scrollButton = document.getElementById('scrollToTopBtn');
-    if (window.scrollY > 850) {
+    if (window.scrollY > 650) {
     scrollButton.style.display = 'block';
     } else {
     scrollButton.style.display = 'none';
@@ -106,7 +105,7 @@ window.onload = function () {
     toggleSection('development-section');
 };
 
-// Home Section Fade out animation
+// ME Image Section Fade out animation
 document.addEventListener("DOMContentLoaded", function () {
     const home = document.getElementById('meImage');
 
@@ -155,18 +154,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// // nav bg on scroll
-// document.addEventListener("DOMContentLoaded", function() {
-//     var navbar = document.getElementById("nav");
+// nav bg on scroll
+document.addEventListener("DOMContentLoaded", function() {
+    var navbar = document.getElementById("nav");
 
-//     window.addEventListener("scroll", function() {
-//         if (window.scrollY > 120) {
-//             navbar.style.backgroundColor = "rgba(18, 11, 79, 1)";
-//         } else {
-//             navbar.style.backgroundColor = "transparent";
-//         }
-//     });
-// });
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 1900) {
+            navbar.style.backgroundColor = "rgba(18, 11, 79, 1)";
+        } else {
+            navbar.style.backgroundColor = "transparent";
+        }
+    });
+});
 
 // nav bar text color 
 document.addEventListener('DOMContentLoaded', function() {
@@ -213,6 +212,7 @@ buttons.forEach(function(button) {
 
 
 // form submission //
+// clear form after submissiom
 function clearForm() {
     // Get the form element by its ID
     var form = document.getElementById('myForm');
@@ -220,7 +220,7 @@ function clearForm() {
     // Reset the form to clear the text fields
     form.reset();
 }
-
+// form submission handle for popup
 async function handleSubmit(event) {
     // Prevent the default form submission behavior
     event.preventDefault();
