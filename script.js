@@ -1,5 +1,29 @@
 // script.js
 
+
+// bg animation 
+document.addEventListener('DOMContentLoaded', () => {
+    const interBubble = document.querySelector('.interactive');
+    let curX = 0;
+    let curY = 0;
+    let tgX = 0;
+    let tgY = 0;
+
+    function move() {
+        curX += (tgX - curX);
+        curY += (tgY - curY);
+        interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+        requestAnimationFrame(move);
+    }
+
+    window.addEventListener('mousemove', (event) => {
+        tgX = event.clientX;
+        tgY = event.clientY;
+    });
+
+    move();
+});
+
 // For Cursor Animation
 const circle = document.getElementById('circle');
 document.addEventListener('mousemove', (e) => {
@@ -91,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const triggerPosition = 0;
 
     if (scrollPosition >= triggerPosition) {
-        home.style.opacity = 1 - (scrollPosition - triggerPosition) / 200;
+        home.style.opacity = 1 - (scrollPosition - triggerPosition) / 100;
     } else {
         home.style.opacity = 1;
     }
@@ -131,18 +155,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// nav bg on scroll
-document.addEventListener("DOMContentLoaded", function() {
-    var navbar = document.getElementById("nav");
+// // nav bg on scroll
+// document.addEventListener("DOMContentLoaded", function() {
+//     var navbar = document.getElementById("nav");
 
-    window.addEventListener("scroll", function() {
-        if (window.scrollY > 120) {
-            navbar.style.backgroundColor = "rgba(18, 11, 79, 1)";
-        } else {
-            navbar.style.backgroundColor = "transparent";
-        }
-    });
-});
+//     window.addEventListener("scroll", function() {
+//         if (window.scrollY > 120) {
+//             navbar.style.backgroundColor = "rgba(18, 11, 79, 1)";
+//         } else {
+//             navbar.style.backgroundColor = "transparent";
+//         }
+//     });
+// });
 
 // nav bar text color 
 document.addEventListener('DOMContentLoaded', function() {

@@ -9,6 +9,26 @@
   <title>Aanuj Khurana</title>
   </head>
   <body>
+    <!-- backgrund -->
+    <div class="gradient-bg">
+      <svg class="bgsvg" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+      <div class="gradients-container">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g4"></div>
+        <div class="g5"></div>
+        <div class="interactive"></div>
+      </div>
+    </div>
     <main>
       <!-- CursorCircle -->
       <div id="circle" class="circle"></div>
@@ -29,7 +49,7 @@
       </svg>
       </div>
       <!-- Success message element -->
-      <div id="overlay">
+      <div  class="overlay" id="overlay">
         <div id="successMessage">🥳 Thanks! I will get back soon</div>
       </div>
       <!-- NAVBAR -->       
@@ -40,6 +60,7 @@
         <a href="#about">About</a>
       </nav>
       <!-- Sections -->
+      <!-- HOME -->
       <section id="home" class="section">
       <div class="home">
         <div class="bodytxt"> Hello 👋，<br />
@@ -114,6 +135,7 @@
         </svg>
       </div>
       </section>
+      <!-- PROJECTS -->
       <section id="projects" class="section">
         <div class="projects">      
           <div class="Pselection">
@@ -412,6 +434,7 @@
           </section>
         </div>        
       </section>
+      <!-- CONTACT -->
       <section id="contact" class="section">
         <!-- Content for the Contact section -->
         <div class="contact-card">
@@ -501,6 +524,7 @@
           </svg>
         </div>
       </section>
+      <!-- ABOUT -->
       <section id="about" class="section">
         <div class="about-card">
           <div class="aboutbg">
@@ -788,11 +812,10 @@
             </div>            
           </div>                    
         </div>
+        <footer class="footer">
+          <p>&copy;2021 Anuj Khurana | All Rights Reserved</p>
+        </footer>
       </section>
-      <section id="blank"></section>
-      <footer class="footer">
-        <p>&copy;2021 Anuj Khurana | All Rights Reserved</p>
-      </footer>
     </main>
     <script src="./script.js"></script>
   </body>
