@@ -263,3 +263,20 @@ async function handleSubmit(event) {
         // Handle error if needed
     }
 }
+
+
+// image click for social media popup
+function showPopup() {
+const popupContainer = document.getElementById('popupContainer');
+popupContainer.style.display = popupContainer.style.display === 'flex' ? 'none' : 'flex';
+}
+
+// Close the popup when clicking outside of it
+window.addEventListener('click', (event) => {
+    const popupContainer = document.getElementById('popupContainer');
+    const meImage = document.getElementById('meImage');
+
+    if (!meImage.contains(event.target) && event.target !== meImage) {
+    popupContainer.style.display = 'none';
+    }
+});
