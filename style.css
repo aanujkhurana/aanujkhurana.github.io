@@ -256,7 +256,9 @@ section {
   align-items: flex-start;
   justify-content: flex-start;
   z-index: 2;
+  transition: transform 0.6s ease-in-out;
 }
+
 .me-social-bg {
   flex-shrink: 0;
   width: 420px;
@@ -290,9 +292,9 @@ section {
 }
 .me-github:hover, .me-linked:hover, .me-behance:hover, .me-email:hover {
   cursor: pointer;
-  color: #ff7373;
-  fill: #ff7373;
-  stroke: #ff7373;
+  color: #95aafb;
+  fill: #95aafb;
+  stroke: #95aafb;
   transform: scale(1.2);
 }
 

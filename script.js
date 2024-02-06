@@ -267,9 +267,22 @@ async function handleSubmit(event) {
 
 // image click for social media popup
 function showPopup() {
-const popupContainer = document.getElementById('popupContainer');
-popupContainer.style.display = popupContainer.style.display === 'flex' ? 'none' : 'flex';
+    const popupContainer = document.getElementById('popupContainer');
+    const isVisible = window.getComputedStyle(popupContainer).getPropertyValue('display') === 'flex';
+
+    if (isVisible) {
+    popupContainer.style.opacity = '0';
+    setTimeout(() => {
+        popupContainer.style.display = 'none';
+    }, 600); 
+    } else {
+    popupContainer.style.display = 'flex';
+    setTimeout(() => {
+        popupContainer.style.opacity = '1';
+    }, 50); // Adding a slight delay before setting opacity to ensure the transition works
+    }
 }
+
 
 // Close the popup when clicking outside of it
 window.addEventListener('click', (event) => {
@@ -278,5 +291,8 @@ window.addEventListener('click', (event) => {
 
     if (!meImage.contains(event.target) && event.target !== meImage) {
     popupContainer.style.display = 'none';
+    }
+    else {
+        popupContainer.style.display = 'flex';
     }
 });
