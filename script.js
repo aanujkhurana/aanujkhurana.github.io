@@ -1,5 +1,19 @@
 // script.js
 
+// resume download
+var buttons = document.querySelectorAll('.btn-resumedownload');
+
+buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        var link = document.createElement('a');
+        link.href = 'https://aanujkhurana.github.io/resume/anujkhurana.pdf';
+        link.target = '_blank'; // Open in a new tab or window
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+});
+
 // bg animation 
 document.addEventListener('DOMContentLoaded', () => {
     const interBubble = document.querySelector('.interactive');
@@ -61,8 +75,41 @@ document.addEventListener('scroll', function() {
     }
 });
 
-// FOR PROJECTS SECTION TOGGLE DESIGN and DEVELOPMENT
+// For Social Media Popup //
+// image click for social media popup
+function showPopup() {
+    const popupContainer = document.getElementById('popupContainer');
+    const isVisible = window.getComputedStyle(popupContainer).getPropertyValue('display') === 'flex';
 
+    if (isVisible) {
+    popupContainer.style.opacity = '0';
+    setTimeout(() => {
+        popupContainer.style.display = 'none';
+    }, 600); 
+    } else {
+    popupContainer.style.display = 'flex';
+    setTimeout(() => {
+        popupContainer.style.opacity = '1';
+    }, 50); // Adding a slight delay before setting opacity to ensure the transition works
+    }
+}
+
+
+// Close the social-popup when clicking outside of it
+window.addEventListener('click', (event) => {
+    const popupContainer = document.getElementById('popupContainer');
+    const meImage = document.getElementById('meImage');
+
+    if (!meImage.contains(event.target) && event.target !== meImage) {
+    popupContainer.style.display = 'none';
+    }
+    else {
+        popupContainer.style.display = 'flex';
+    }
+});
+
+// FOR PROJECTS SECTION TOGGLE DESIGN and DEVELOPMENT
+// Toggle between the Design and Development sections
 function toggleSection(sectionId) {
     // Get the currently active section
     const currentSection = document.querySelector('.active-section');
@@ -196,30 +243,45 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// resume download
-var buttons = document.querySelectorAll('.btn-resumedownload');
+// Function to animate placeholder text
+const placeholders = ["Start tying your message here", "don't be shy!!", "type anything","Aasqpqpiinf","....","okay not anything."]
 
-buttons.forEach(function(button) {
-    button.addEventListener('click', function() {
-        var link = document.createElement('a');
-        link.href = 'https://aanujkhurana.github.io/resume/anujkhurana.pdf';
-        link.target = '_blank'; // Open in a new tab or window
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    });
-});
+let index = 0;
+let placeholderElement = document.getElementById("message-input");
+
+function animatePlaceholder() {
+    let placeholder = placeholders[index];
+    let length = 0;
+    let interval = setInterval(function() {
+        if (length <= placeholder.length) {
+            placeholderElement.setAttribute("placeholder", placeholder.slice(0, length++));
+        } else {
+            clearInterval(interval);
+            setTimeout(erasePlaceholder, 1500);
+        }
+    }, 60);
+}
+
+// Function to erase placeholder text
+function erasePlaceholder() {
+    let placeholder = placeholders[index];
+    let length = placeholder.length;
+    let interval = setInterval(function() {
+        if (length >= 0) {
+            placeholderElement.setAttribute("placeholder", placeholder.slice(0, length--));
+        } else {
+            clearInterval(interval);
+            index = (index + 1) % placeholders.length;
+            setTimeout(animatePlaceholder, 500);
+        }
+    }, 60);
+}
+
+// Call animatePlaceholder function to start the animation
+animatePlaceholder();
 
 
 // form submission //
-// clear form after submissiom
-function clearForm() {
-    // Get the form element by its ID
-    var form = document.getElementById('myForm');
-
-    // Reset the form to clear the text fields
-    form.reset();
-}
 // form submission handle for popup
 async function handleSubmit(event) {
     // Prevent the default form submission behavior
@@ -256,43 +318,21 @@ async function handleSubmit(event) {
             }, 3000);
         } else {
             console.error('Error submitting form:', response.statusText);
-            // Handle error if needed
+            // Display error overlay
+            document.getElementById('error-overlay').style.display = 'flex';
         }
     } catch (error) {
         console.error('Error submitting form:', error.message);
-        // Handle error if needed
+        // Display error overlay
+        document.getElementById('error-overlay').style.display = 'flex';
     }
+    animatePlaceholder();
 }
+// clear form after submissiom
+function clearForm() {
+    // Get the form element by its ID
+    var form = document.getElementById('myForm');
 
-
-// image click for social media popup
-function showPopup() {
-    const popupContainer = document.getElementById('popupContainer');
-    const isVisible = window.getComputedStyle(popupContainer).getPropertyValue('display') === 'flex';
-
-    if (isVisible) {
-    popupContainer.style.opacity = '0';
-    setTimeout(() => {
-        popupContainer.style.display = 'none';
-    }, 600); 
-    } else {
-    popupContainer.style.display = 'flex';
-    setTimeout(() => {
-        popupContainer.style.opacity = '1';
-    }, 50); // Adding a slight delay before setting opacity to ensure the transition works
-    }
+    // Reset the form to clear the text fields
+    form.reset();
 }
-
-
-// Close the popup when clicking outside of it
-window.addEventListener('click', (event) => {
-    const popupContainer = document.getElementById('popupContainer');
-    const meImage = document.getElementById('meImage');
-
-    if (!meImage.contains(event.target) && event.target !== meImage) {
-    popupContainer.style.display = 'none';
-    }
-    else {
-        popupContainer.style.display = 'flex';
-    }
-});

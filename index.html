@@ -9,7 +9,7 @@
   <title>Aanuj Khurana</title>
   </head>
   <body>
-    <!-- backgrund -->
+    <!-- background -->
     <div class="gradient-bg">
       <svg class="bgsvg" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -51,6 +51,10 @@
       <!-- Success message element -->
       <div  class="overlay" id="overlay">
         <div id="successMessage">🥳 Thanks! I will get back soon</div>
+      </div>
+      <!-- error message element -->
+      <div  class="error-overlay" id="overlay">
+        <div id="successMessage">Whoops! some error, <br/> Please try later.</div>
       </div>
       <!-- NAVBAR -->       
       <nav class="nav" id="nav">
@@ -554,11 +558,11 @@
         <!-- Content for the Contact section -->
         <div class="contact-card">
           <form id="myForm" action="https://formspree.io/f/mqkrewbn" method="POST" onsubmit="handleSubmit(event)">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Message" rows="4" required></textarea>
+            <input type="text" name="name" placeholder="Name" id="name-input" required>
+            <input type="email" name="email" placeholder="Email" id="email-input" required>
+            <textarea name="message" placeholder="" rows="4" id="message-input" required></textarea>
             <input type="submit" value="Send Message">
-        </form>
+          </form>
           <div class="cardbg-2"></div>
           <div class="gold-coast-australia">Gold Coast, Australia</div>
           <a href="mailto:aanujkhurana@gmail.com"><div class="email">aanujkhurana@gmail.com</div></a>

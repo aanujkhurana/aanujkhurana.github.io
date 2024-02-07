@@ -56,37 +56,55 @@
   fill: #ff6262;
 }
 
-/* form sucessmessage */
+/* form success message */
 .overlay {
   display: none;
   position: fixed;
   left: calc(50% - 250px);
   top: calc(50% - 125px);
-  border-radius: 24px;
+  border-radius: 14px;
   border-style: solid;
-  border-color: #95aafb;
+  border-color: #ffffff59;
   border-width: 2px;
-  width: 450px;
-  height: 200px;
-  background: rgb(20, 14, 79);
-  backdrop-filter: blur(24px);
+  width: 400px;
+  height: 180px;
+  background: #ff6262;
   justify-content: center;
   align-items: center;
   z-index: 3;
-  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 30px -5px rgb(0, 0, 0);
+  animation: fadeIn 0.5s ease-in-out;
+}
+/* form error message */
+.error-overlay {
+  display: none;
+  position: fixed;
+  left: calc(50% - 250px);
+  top: calc(50% - 125px);
+  border-radius: 14px;
+  border-style: solid;
+  border-color: #ffffff59;
+  border-width: 2px;
+  width: 400px;
+  height: 180px;
+  background: #ff2f2f;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  box-shadow: 0px 10px 30px -5px rgb(0, 0, 0);
   animation: fadeIn 0.5s ease-in-out;
 }
 
 /* Style for the success message */
 #successMessage {
-  color: #95aafb;
+  color: #ffffff;
   padding: 20px;
-  border-radius: 10px;
   font-family: "Actor", sans-serif;
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 600;
   animation: slideIn 0.5s ease-in-out, fadeOut 0.5s 2.5s ease-in-out forwards;
 }
+
  /* Animation keyframes for fadeIn */
 @keyframes fadeIn {
   from {
