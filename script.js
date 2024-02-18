@@ -3,8 +3,8 @@
 // resume download
 var buttons = document.querySelectorAll('.btn-resumedownload');
 
-buttons.forEach(function(button) {
-    button.addEventListener('click', function() {
+buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
         var link = document.createElement('a');
         link.href = 'https://aanujkhurana.github.io/resume/anujkhurana.pdf';
         link.target = '_blank'; // Open in a new tab or window
@@ -51,27 +51,27 @@ document.addEventListener('mousemove', (e) => {
         circle.classList.remove('big');
     }
 
-    setTimeout(() => { 
-        circle.style.left = `${e.pageX - width/2}px`;
-        circle.style.top = `${e.pageY - height/2}px`;
+    setTimeout(() => {
+        circle.style.left = `${e.pageX - width / 2}px`;
+        circle.style.top = `${e.pageY - height / 2}px`;
     }, 10);
 });
 
 // Scroll to top function
 function scrollToTop() {
     window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+        top: 0,
+        behavior: 'smooth'
     });
 }
 
 // Show/hide the scroll-to-top button based on scroll position
-document.addEventListener('scroll', function() {
+document.addEventListener('scroll', function () {
     var scrollButton = document.getElementById('scrollToTopBtn');
     if (window.scrollY > 650) {
-    scrollButton.style.display = 'block';
+        scrollButton.style.display = 'block';
     } else {
-    scrollButton.style.display = 'none';
+        scrollButton.style.display = 'none';
     }
 });
 
@@ -82,15 +82,15 @@ function showPopup() {
     const isVisible = window.getComputedStyle(popupContainer).getPropertyValue('display') === 'flex';
 
     if (isVisible) {
-    popupContainer.style.opacity = '0';
-    setTimeout(() => {
-        popupContainer.style.display = 'none';
-    }, 600); 
+        popupContainer.style.opacity = '0';
+        setTimeout(() => {
+            popupContainer.style.display = 'none';
+        }, 600);
     } else {
-    popupContainer.style.display = 'flex';
-    setTimeout(() => {
-        popupContainer.style.opacity = '1';
-    }, 50); // Adding a slight delay before setting opacity to ensure the transition works
+        popupContainer.style.display = 'flex';
+        setTimeout(() => {
+            popupContainer.style.opacity = '1';
+        }, 50); // Adding a slight delay before setting opacity to ensure the transition works
     }
 }
 
@@ -101,7 +101,7 @@ window.addEventListener('click', (event) => {
     const meImage = document.getElementById('meImage');
 
     if (!meImage.contains(event.target) && event.target !== meImage) {
-    popupContainer.style.display = 'none';
+        popupContainer.style.display = 'none';
     }
     else {
         popupContainer.style.display = 'flex';
@@ -137,7 +137,7 @@ function toggleSection(sectionId) {
     // Set active class to the corresponding button
     const developmentButton = document.querySelector('.bttn');
     const designButton = document.querySelector('.bttn2');
-    
+
     if (sectionId === 'development-section') {
         developmentButton.classList.add('active');
         designButton.classList.remove('active');
@@ -157,14 +157,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const home = document.getElementById('meImage');
 
     function fadeOutImage() {
-    const scrollPosition = window.scrollY;
-    const triggerPosition = 0;
+        const scrollPosition = window.scrollY;
+        const triggerPosition = 0;
 
-    if (scrollPosition >= triggerPosition) {
-        home.style.opacity = 1 - (scrollPosition - triggerPosition) / 300;
-    } else {
-        home.style.opacity = 1;
-    }
+        if (scrollPosition >= triggerPosition) {
+            home.style.opacity = 1 - (scrollPosition - triggerPosition) / 300;
+        } else {
+            home.style.opacity = 1;
+        }
     }
     window.addEventListener('scroll', fadeOutImage);
 });
@@ -202,12 +202,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // nav bg on scroll
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     var navbar = document.getElementById("nav");
 
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", function () {
         if (window.scrollY > 1900) {
-            navbar.style.backgroundColor = "rgba(18, 11, 79, 1)";
+            navbar.style.backgroundColor = "#fff";
         } else {
             navbar.style.backgroundColor = "transparent";
         }
@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // nav bar text color 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('.nav a');
 
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Function to animate placeholder text
-const placeholders = ["Start tying your message here", "don't be shy!!", "type anything","Aasqpqpiinf","....","okay not anything."]
+const placeholders = ["Start tying your message here.....", "type anything....", "I am waiting for your message...."]
 
 let index = 0;
 let placeholderElement = document.getElementById("message-input");
@@ -252,7 +252,7 @@ let placeholderElement = document.getElementById("message-input");
 function animatePlaceholder() {
     let placeholder = placeholders[index];
     let length = 0;
-    let interval = setInterval(function() {
+    let interval = setInterval(function () {
         if (length <= placeholder.length) {
             placeholderElement.setAttribute("placeholder", placeholder.slice(0, length++));
         } else {
@@ -266,7 +266,7 @@ function animatePlaceholder() {
 function erasePlaceholder() {
     let placeholder = placeholders[index];
     let length = placeholder.length;
-    let interval = setInterval(function() {
+    let interval = setInterval(function () {
         if (length >= 0) {
             placeholderElement.setAttribute("placeholder", placeholder.slice(0, length--));
         } else {
@@ -336,3 +336,16 @@ function clearForm() {
     // Reset the form to clear the text fields
     form.reset();
 }
+
+// DARK SWITCH
+document.addEventListener('DOMContentLoaded', function () {
+    var themeCheckbox = document.getElementById('themeCheckbox');
+    var stylesheet = document.getElementById('stylesheet');
+
+    themeCheckbox.addEventListener('change', function () {
+        var newStyleSheet = themeCheckbox.checked ? 'styleDark.css' : 'style.css';
+        stylesheet.setAttribute('href', newStyleSheet);
+    });
+});
+
+
