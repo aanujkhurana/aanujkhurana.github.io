@@ -1,6 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Advent+Pro);
 @import url(https://fonts.googleapis.com/css?family=Actor);
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 /* style start here */
 
 body {
@@ -613,11 +617,10 @@ section {
 }
 
 .card>.row {
-    background-color: #fdf4fd;
-    color: #ff6262;
+    background-color: #f5f5f5;
     display: flex;
     flex-wrap: nowrap;
-    padding: 0;
+    padding: 1em;
 }
 
 .card>.row>.description {
@@ -625,29 +628,23 @@ section {
     justify-content: center;
     align-items: start;
     flex-direction: column;
-    overflow: hidden;
-    height: 120px;
-    width: 580px;
+    height: 60px;
+    width: 600px;
     opacity: 0;
     transform: translateY(30px);
     transition-delay: .3s;
     transition: all .3s ease;
-    margin: 10px 0px 10px 20px;
+    margin: 10px 10px 10px 20px;
     font-family: "Actor", sans-serif;
     transition: display 0.3s ease;
 }
 
-.description p {
-    color: #000;
-    padding: 6px;
-    font-size: 12px;
-    width: 80%;
-}
 
-.description h4 {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
+.description h1 {
+    margin: 0.5em;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
 }
 
 .linktogit {
@@ -1567,13 +1564,12 @@ input[type="submit"]:hover {
 
 .cards-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: row;
     grid-gap: 2rem;
-    padding: 2rem;
-    margin: 0 auto;
+    padding: 6rem;
+    margin: 10 auto;
     width: max-content;
+    overflow-y: auto;
 }
 
 .dev-card {
@@ -1602,8 +1598,7 @@ input[type="submit"]:hover {
     margin: 0.5em;
     font-size: 1em;
     line-height: 1.2em;
-    color: #00000050;
-    transition: transform 0.3s ease, color 0.3s ease;
+    color: #1a1a1a;
     transform: translateY(0);
 }
 
@@ -1615,8 +1610,8 @@ input[type="submit"]:hover {
     line-height: 2em;
     max-width: 98%;
     display: none;
-    transition: transform 0.3s ease, color 0.3s ease;
     transform: translateY(200%);
+    transition: display 1s ease, transform 1s ease;
 }
 
 .dev-card .tags {
@@ -1630,7 +1625,6 @@ input[type="submit"]:hover {
     padding: 0 0.5em;
     margin-right: 0.5em;
     line-height: 1.5em;
-    transition: display 0.3s ease;
 }
 
 .dev-card:hover .tags .tag {
@@ -1662,7 +1656,7 @@ input[type="submit"]:hover {
     left: -50%;
     top: -50%;
     z-index: -5;
-    transition: all, var(--transition-time);
+    transition: all, 0.4s;
     transition-timing-function: ease-in-out;
 }
 
@@ -1689,10 +1683,6 @@ input[type="submit"]:hover {
     p {
         transform: translateY(0);
         display: flex;
-    }
-
-    h1 {
-        color: #120B4F;
     }
 }
 
