@@ -178,7 +178,7 @@ body {
     scroll-behavior: smooth;
     overflow: hidden;
     font-family: 'Actor', sans-serif;
-    background: var(--black);
+    background: #fff;
 }
 
 .gradient-bg {
