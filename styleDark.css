@@ -120,7 +120,7 @@
   --color8: rgb(255, 177, 195);
   --color9: rgb(100, 220, 255); */
     /* MAIN */
-    --bg: linear-gradient(45deg, #a0bfce, #fff);
+    --bg: linear-gradient(45deg, #96dcff66, #bcbdd375);
     --black: #000;
     --white: #fff;
     --light: #eeeeee;
@@ -178,8 +178,20 @@ body {
     scroll-behavior: smooth;
     overflow: hidden;
     font-family: 'Actor', sans-serif;
-    background: #fff;
+    background: var(--white);
 }
+
+.main {
+    background-image: url("./img/grid.svg");
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    z-index: -2;
+}
+
 
 .gradient-bg {
     width: 100%;
@@ -232,7 +244,7 @@ body {
     transform-origin: calc(50% - 400px);
     animation: moveInCircle 20s reverse infinite;
     background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
-    opacity: 80.;
+    opacity: 0.8;
 }
 
 .g3 {
@@ -259,14 +271,14 @@ body {
     transform-origin: calc(50% - 800px) calc(50% + 200px);
     animation: moveInCircle 20s ease infinite;
     background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
-    opacity: 1;
+    opacity: 0.8;
 }
 
 .interactive {
     top: -50%;
     left: -50%;
     background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
-    opacity: 1;
+    opacity: 0.7;
 }
 
 /* mouse pointer */
@@ -1078,6 +1090,7 @@ section {
 }
 
 .cardbg-2 {
+    border-radius: 48px;
     background: var(--lightM);
     width: 300px;
     height: 100%;
@@ -1703,15 +1716,17 @@ input[type="submit"]:hover {
 
 /* footer */
 .footer {
+    border-radius: 42px;
     bottom: 0;
     position: absolute;
-    width: 100vw;
+    width: 80%;
     background: var(--trans);
     min-height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    margin-bottom: 2em;
 }
 
 .footer p {

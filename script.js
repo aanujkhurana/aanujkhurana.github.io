@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", function () {
         if (window.scrollY > 1900) {
-            navbar.style.backgroundColor = "#fff";
+            navbar.style.backgroundColor = "#000";
         } else {
             navbar.style.backgroundColor = "transparent";
         }

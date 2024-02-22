@@ -103,6 +103,7 @@
   }
 }
 
+
 :root {
   /* bg colors */
   --color1: 18, 113, 255;
@@ -115,22 +116,21 @@
   --blending: hard-light;
 
   /* MAIN */
-  --bg: linear-gradient(180deg, #120b4f 100%, #293064 100%);
+  --bg: linear-gradient(180deg, #120b4f7d 100%, #20286580 100%);
   --black: #000;
   --white: #fff;
   --light: #eeeeee;
-  --dark: #120b4f;
+  --dark: #0f0c2f;
   --darkM: #eeeeee;
   --lightM: #00000078;
   --grey: #c1c1c1;
   --accent: #ff6262;
-  --sub: #353a84;
+  --sub: #676ed3;
   --highlight: #717ef1;
-  --highlight2: #00fbff99;
+  --highlight2: #00fbff;
   --shadow1: #00000033;
   --shadow2: #00000099;
   --trans: #ffffff59;
-  --blackbg: #151d6b;
 }
 
 /* style start here */
@@ -176,6 +176,18 @@ body {
   font-family: 'Actor', sans-serif;
   background: var(--black);
 }
+
+.main {
+  background-image: url("./img/gridDark.svg");
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  z-index: -2;
+}
+
 
 .gradient-bg {
   width: 100%;
@@ -228,7 +240,7 @@ body {
   transform-origin: calc(50% - 400px);
   animation: moveInCircle 20s reverse infinite;
   background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
-  opacity: 80.;
+  opacity: 0.8;
 }
 
 .g3 {
@@ -255,14 +267,14 @@ body {
   transform-origin: calc(50% - 800px) calc(50% + 200px);
   animation: moveInCircle 20s ease infinite;
   background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .interactive {
   top: -50%;
   left: -50%;
   background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
-  opacity: 1;
+  opacity: 0.7;
 }
 
 /* mouse pointer */
@@ -1050,7 +1062,7 @@ section {
 .contact-bg {
   position: relative;
   z-index: -2;
-  overflow: visible;
+  overflow: hidden;
   top: 10%;
 }
 
@@ -1074,6 +1086,7 @@ section {
 }
 
 .cardbg-2 {
+  border-radius: 48px;
   background: var(--dark);
   width: 300px;
   height: 100%;
@@ -1105,7 +1118,7 @@ section {
 .email:hover {
   font-size: 20px;
   text-decoration: none;
-  color: var(--sub);
+  color: var(--highlight2);
 }
 
 
@@ -1699,15 +1712,17 @@ input[type="submit"]:hover {
 
 /* footer */
 .footer {
+  border-radius: 42px;
   bottom: 0;
   position: absolute;
-  width: 100vw;
-  background: var(--dark);
+  width: 80%;
+  background: var(--shadow2);
   min-height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  margin-bottom: 2em;
 }
 
 .footer p {
