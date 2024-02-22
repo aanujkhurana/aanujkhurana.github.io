@@ -201,15 +201,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// nav bg on scroll
 document.addEventListener("DOMContentLoaded", function () {
     var navbar = document.getElementById("nav");
 
     window.addEventListener("scroll", function () {
         if (window.scrollY > 1900) {
-            navbar.style.backgroundColor = "#000";
+            navbar.classList.add("scrolled");
         } else {
-            navbar.style.backgroundColor = "transparent";
+            navbar.classList.remove("scrolled");
         }
     });
 });
