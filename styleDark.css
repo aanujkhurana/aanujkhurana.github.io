@@ -774,7 +774,6 @@ section {
     margin: 10 auto;
     width: max-content;
     overflow-y: auto;
-    overflow-x: hidden;
 }
 
 .dev-card {
@@ -1273,11 +1272,11 @@ input[type="submit"]:hover {
     width: 1200px;
     position: relative;
     border-radius: 28px;
-    background: var(--lightM);
+    background: var(--white);
 }
 
 .aboutbg {
-    background: var(--white);
+    background: var(--lightM);
     border-radius: 28px;
     width: 600px;
     height: 100%;
