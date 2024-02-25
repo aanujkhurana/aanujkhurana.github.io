@@ -131,13 +131,13 @@
   --blending: hard-light;
 
   /* MAIN */
-  --bg: linear-gradient(180deg, #120b4f7d 100%, #20286580 100%);
+  --bg: linear-gradient(180deg, #0b0732ad 100%, #1a2154a8 100%);
   --black: #000;
   --white: #fff;
   --light: #eeeeee;
-  --dark: #0f0c2f;
+  --dark: #0b0732;
   --darkM: #eeeeee;
-  --lightM: #00000078;
+  --lightM: #1a2154;
   --grey: #c1c1c1;
   --accent: #ff6262;
   --sub: #676ed3;
@@ -1130,9 +1130,6 @@ section {
 .contact-card {
   background: var(--lightM);
   border-radius: 48px;
-  border-style: solid;
-  border-color: var(--highlight);
-  border-width: 1px;
   width: 880px;
   height: 70%;
   position: relative;
@@ -1284,7 +1281,8 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: var(--sub);
+  background-color: transparent;
+  border: 2px solid var(--white);
   width: 420px;
   margin-top: 16px;
   padding: 10px;
@@ -1294,7 +1292,6 @@ input[type="submit"] {
   font-family: "Actor", sans-serif;
   cursor: pointer;
   border-radius: 8px;
-  outline: none;
   box-shadow: 0px 10px 30px -5px var(--shadow1);
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1318,9 +1315,6 @@ input[type="submit"]:hover {
 
 .about-card {
   margin: 40px;
-  border-style: solid;
-  border-color: var(--highlight);
-  border-width: 2px;
   width: 1200px;
   position: relative;
   border-radius: 28px;
