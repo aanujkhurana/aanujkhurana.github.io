@@ -324,7 +324,7 @@ body {
     color: var(--darkM);
     border: 2px solid var(--darkM);
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--white);
+    box-shadow: 0 0 10px var(--shadow1);
     width: 3rem;
     height: 3rem;
     font-size: 20px;
@@ -418,22 +418,26 @@ body {
     gap: 28px;
     align-items: center;
     justify-content: center;
-    transition: opacity 1.0s ease;
     z-index: 2;
     opacity: 1;
     color: var(--darkM);
+    transition: opacity 1.0s ease;
 }
 
-
 .scrolled {
-    background-color: var(--light);
+    background-color: var(--trans);
 }
 
 .nav a {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--darkM);
+    transition: color 0.3s ease;
     text-decoration: none;
     font-family: "Actor", sans-serif;
     font-weight: 600;
 }
+
 
 .nav a:hover {
     color: var(--accent);
@@ -441,7 +445,10 @@ body {
 }
 
 .nav a.active {
-    color: var(--accent);
+    padding: 8px 16px;
+    background-color: var(--accent);
+    border-radius: 18px;
+    color: var(--white);
     font-weight: 800;
     text-decoration: none;
     font-family: "Actor", sans-serif;
@@ -1680,8 +1687,8 @@ input[type="submit"]:hover {
     font-size: 18px;
     font-family: "Advent Pro", sans-serif;
     letter-spacing: 7px;
-    left: auto;
-    right: 4%;
+    right: auto;
+    left: 4%;
     margin: 20px;
     width: 60px;
 }
@@ -1693,8 +1700,8 @@ input[type="submit"]:hover {
     width: 60px;
     z-index: 1000;
     margin: 20px;
-    right: auto;
-    left: 2%;
+    left: auto;
+    right: 2%;
 }
 
 /* switch settings 👇 */
