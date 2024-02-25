@@ -182,7 +182,7 @@ body {
 }
 
 .main {
-    background-image: url("./img/grid.svg");
+    background-image: url("../img/grid.svg");
     width: 100vw;
     min-height: 100vh;
     position: fixed;
@@ -1054,19 +1054,19 @@ section {
 
 /* design imgs */
 .card[for="d1"] {
-    background-image: url('./img/des/img3.png');
+    background-image: url('../img/des/img3.png');
 }
 
 .card[for="d2"] {
-    background-image: url('./img/des/img1.png');
+    background-image: url('../img/des/img1.png');
 }
 
 .card[for="d3"] {
-    background-image: url('./img/des/img2.png');
+    background-image: url('../img/des/img2.png');
 }
 
 .card[for="d4"] {
-    background-image: url('./img/des/img4.png');
+    background-image: url('../img/des/img4.png');
 }
 
 .contact-bg {

@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var stylesheet = document.getElementById('stylesheet');
 
     themeCheckbox.addEventListener('change', function () {
-        var newStyleSheet = themeCheckbox.checked ? 'styleDark.css' : 'style.css';
+        var newStyleSheet = themeCheckbox.checked ? './CSS/styleDark.css' : './CSS/style.css';
         stylesheet.setAttribute('href', newStyleSheet);
     });
 });
