@@ -1673,6 +1673,19 @@ input[type="submit"]:hover {
     font-weight: 300;
 }
 
+/* clock */
+.clock {
+    position: absolute;
+    color: var(--black);
+    font-size: 18px;
+    font-family: "Advent Pro", sans-serif;
+    letter-spacing: 7px;
+    left: auto;
+    right: 4%;
+    margin: 20px;
+    width: 60px;
+}
+
 
 /* dark mode switch */
 .toggle-switch {
