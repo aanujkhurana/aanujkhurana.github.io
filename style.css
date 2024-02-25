@@ -791,8 +791,8 @@ section {
   padding: 0.5em;
   display: flex;
   align-items: flex-end;
-  box-shadow: 0 0 5em -1em black;
   cursor: pointer;
+  box-shadow: 0px 16px 12px 2px var(--shadow1);
 }
 
 .dev-card h1 {
@@ -883,7 +883,6 @@ section {
   color: var(--white);
   overflow: hidden;
   border: none;
-  box-shadow: 0px 10px 60px -5px var(--shadow2);
 
   .date {
     display: flex;
